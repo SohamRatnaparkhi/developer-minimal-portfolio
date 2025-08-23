@@ -26,12 +26,28 @@ const BlogSection: React.FC = () => {
           {featuredPosts.map((post) => (
             <article
               key={post.id}
-              className="bg-card rounded-lg border border-border/50 overflow-hidden hover:shadow-medium transition-all hover:-translate-y-1"
+              className="bg-card rounded-lg border border-border/50 overflow-hidden hover:shadow-medium transition-all hover:-translate-y-1 cursor-pointer"
+              onClick={() => window.open(post.url, '_blank')}
             >
-              {/* Post Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                <div className="text-3xl font-bold text-primary/50">
-                  {post.title.split(' ')[0].charAt(0)}
+              {/* Post Image */}
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={post.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    // Fallback to placeholder if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                {/* Fallback placeholder */}
+                <div className="h-full bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center" style={{ display: 'none' }}>
+                  <div className="text-3xl font-bold text-primary/50">
+                    {post.title.split(' ')[0].charAt(0)}
+                  </div>
                 </div>
               </div>
 
@@ -65,10 +81,10 @@ const BlogSection: React.FC = () => {
                   ))}
                 </div>
 
-                <Button variant="ghost" size="sm" className="p-0 h-auto text-primary">
+                <div className="flex items-center gap-2 text-primary text-sm font-medium">
                   Read More
-                  <ArrowRight className="h-3 w-3 ml-1" />
-                </Button>
+                  <ArrowRight className="h-3 w-3" />
+                </div>
               </div>
             </article>
           ))}

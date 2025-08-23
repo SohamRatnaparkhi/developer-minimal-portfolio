@@ -83,7 +83,7 @@ export default {
 			},
 			animation: {
 				'float': 'float 6s ease-in-out infinite',
-				'slide': 'slide 30s linear infinite',
+				'slide': 'slide 8s linear infinite',
 				'slide-mobile': 'slide 15s linear infinite',
 				'slide-mobile-fast': 'slide-mobile-fast 10s linear infinite',
 				'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
@@ -132,5 +132,6 @@ export default {
 			}
 		}
 	},
+	// eslint-disable-next-line @typescript-eslint/no-require-imports
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;

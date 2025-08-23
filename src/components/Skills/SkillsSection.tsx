@@ -1,35 +1,19 @@
 import React from 'react';
 import skillsData from '../../../config/skills.json';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Code, Database, Wrench, MoreHorizontal } from 'lucide-react';
 
 const SkillsSection: React.FC = () => {
   // Group skills for mobile tabs
-  const languageNames = new Set([
-    'GoLang',
-    'JavaScript',
-    'TypeScript',
-    'Python',
-    'Java',
-    'C++',
-    'C',
-    'HTML5',
-    'CSS3'
-  ]);
-
-  const toolNames = new Set([
-    'Docker',
-    'Kubernetes',
-    'Git',
-    'TailwindCSS'
-  ]);
-
-  const languages = skillsData.filter((s) => languageNames.has(s.name));
+  const languages = skillsData.filter((s) => s.category === 'Language');
+  const frameworks = skillsData.filter((s) => s.category === 'Framework');
   const databases = skillsData.filter((s) => s.category === 'Database');
-  const tools = skillsData.filter((s) => toolNames.has(s.name));
+  const tools = skillsData.filter((s) => s.category === 'Tools');
   const others = skillsData.filter(
-    (s) => !languageNames.has(s.name) && s.category !== 'Database' && !toolNames.has(s.name)
+    (s) => !['Language', 'Framework', 'Database', 'Tools'].includes(s.category)
   );
 
+  console.log(languages, frameworks, databases, tools, others);
 
   return (
     <section id="skills" className="py-20">
@@ -47,17 +31,25 @@ const SkillsSection: React.FC = () => {
         {/* Mobile: Categorized tabs with continuous marquee */}
         <Tabs defaultValue="languages" className="w-full md:hidden">
           <TabsList className="grid w-full grid-cols-4 mb-8">
-            <TabsTrigger value="languages">Languages</TabsTrigger>
-            <TabsTrigger value="databases">Databases</TabsTrigger>
-            <TabsTrigger value="tools">Tools</TabsTrigger>
-            <TabsTrigger value="others">Others</TabsTrigger>
+            <TabsTrigger value="languages" className="flex flex-col items-center gap-1 p-1">
+              <Code className="w-5 h-5" />
+            </TabsTrigger>
+            <TabsTrigger value="databases" className="flex flex-col items-center gap-1 p-1">
+              <Database className="w-5 h-5" />
+            </TabsTrigger>
+            <TabsTrigger value="tools" className="flex flex-col items-center gap-1 p-1">
+              <Wrench className="w-5 h-5" />
+            </TabsTrigger>
+            <TabsTrigger value="others" className="flex flex-col items-center gap-1 p-1">
+              <MoreHorizontal className="w-5 h-5" />
+            </TabsTrigger>
           </TabsList>
 
           {[
             { key: 'languages', data: languages },
             { key: 'databases', data: databases },
             { key: 'tools', data: tools },
-            { key: 'others', data: others }
+            { key: 'others', data: others },
           ].map(({ key, data }) => (
             <TabsContent key={key} value={key} className="mt-0">
               <div className="relative overflow-hidden">
@@ -68,8 +60,20 @@ const SkillsSection: React.FC = () => {
                       className="skill-item bg-card rounded-lg p-4 border border-border/50 hover:border-primary/20 transition-all flex-shrink-0 w-48"
                     >
                       <div className="flex flex-col items-center space-y-2">
-                        <div className="w-12 h-12 bg-gradient-to-br from-skill-accent to-skill-accent/70 rounded-lg flex items-center justify-center">
-                          <span className="text-lg font-bold text-white">
+                        <div className="w-16 h-16 bg-white/90 rounded-lg flex items-center justify-center p-1 shadow-sm border border-gray-100">
+                          <img 
+                            src={skill.logo} 
+                            alt={`${skill.name} logo`}
+                            className="w-14 h-14 object-contain"
+                            onError={(e) => {
+                              // Fallback to first character if image fails to load
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = 'none';
+                              const fallback = target.nextElementSibling as HTMLElement;
+                              if (fallback) fallback.style.display = 'flex';
+                            }}
+                          />
+                          <span className="text-lg font-bold text-white hidden">
                             {skill.name.charAt(0)}
                           </span>
                         </div>
@@ -93,15 +97,27 @@ const SkillsSection: React.FC = () => {
         </Tabs>
 
         {/* Skills Grid for Static View - Desktop only */}
-        <div className="hidden md:grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {skillsData.slice(0, 12).map((skill) => (
+        <div className="hidden md:grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6">
+          {skillsData.map((skill) => (
             <div
               key={skill.name}
               className="skill-item bg-card p-4 rounded-lg shadow-soft border border-border/50 hover:border-primary/20"
             >
               <div className="flex flex-col items-center space-y-2">
-                <div className="w-12 h-12 bg-gradient-to-br from-skill-accent to-skill-accent/70 rounded-lg flex items-center justify-center">
-                  <span className="text-lg font-bold text-white">
+                <div className="w-16 h-16 bg-white/90 rounded-lg flex items-center justify-center p-1 shadow-sm border border-gray-100">
+                  <img 
+                    src={skill.logo} 
+                    alt={`${skill.name} logo`}
+                    className="w-14 h-14 object-contain"
+                    onError={(e) => {
+                      // Fallback to first character if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
+                    }}
+                  />
+                  <span className="text-lg font-bold text-white hidden">
                     {skill.name.charAt(0)}
                   </span>
                 </div>

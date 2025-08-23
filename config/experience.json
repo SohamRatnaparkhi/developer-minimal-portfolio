@@ -1,22 +1,49 @@
 [
   {
     "id": 1,
+    "link": "https://usefindr.com",
     "company": "Findr AI",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/companies/findr.png",
-    "position": "Product Engineer",
+    "logo": "https://www.usefindr.com/static/images/logos/findr.svg",
+    "position": "Product | Founding Engineer",
     "startDate": "April 2025",
     "endDate": "Present",
     "current": true,
     "responsibilities": [
-      "Developed Pro-Search, a production-grade RAG system with constrained chain-of-thought planning and optimal multi-step retrieval.",
-      "Built specialized AI agents with a Model-Context-Protocol framework enabling context-aware application integration with 80% accuracy.",
-      "Optimized backend with multi-threading and auto-scalable servers, reducing time-to-first-token from over 10s to under 5s."
+      "Engineered Pro-Search, a production-grade RAG system with chain-of-thought planning and optimized multi-step retrieval.",
+      "Built scalable data ingestion pipelines to process embed and ingest 1000s of documents, ensuring optimal server utilization and zero downtime.",
+      "Increased search engine accuracy by 20% through custom chunking, advanced retrieval strategies, and context management.",
+      "Reduced key latency metrics (p50/p90) by over 50% by optimizing the backend with multi-threading, async-coroutines and auto-scaling.",
+      "Built the strongly types, scalable and user-friendly APIs and SDKs to expose these ingestion and search pipelines"
+    ],
+    "techStack": [
+      "FastAPI",
+      "AWS",
+      "SQS",
+      "Valkey (redis-fork)",
+      "MongoDB",
+      "LLMs",
+      "RAG"
+    ],
+    "misc": [
+      {
+        "work": [
+          {
+            "text": "Findr AI",
+            "url": "https://usefindr.com"
+          }, 
+          {
+            "text": "Cortex AI",
+            "url": "https://usecortex.ai"
+          }
+        ]
+      }
     ]
   },
   {
     "id": 2,
+    "link": "https://www.mitacs.ca/our-programs/globalink-research-internship-students/",
     "company": "University of Windsor",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/companies/windsor.png",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/exp/mitacs.png",
     "position": "Research Intern",
     "startDate": "Aug 2024",
     "endDate": "Oct 2024",
@@ -25,12 +52,27 @@
       "Fine-tuned 40+ LLMs (3B-70B parameters) using QLoRA and federated learning, achieving SOTA results on medical and financial datasets.",
       "Implemented a privacy-preserving distributed training architecture, demonstrating 22% lower variance than traditional fine-tuning.",
       "Worked with Python, PyTorch, Hugging Face, PEFT, and QLoRA in a distributed systems environment."
+    ],
+    "techStack": [
+      "Python",
+      "PyTorch",
+      "Hugging Face",
+      "PEFT",
+      "QLoRA",
+      "Federated Learning"
+    ],
+    "misc": [
+      {
+        "text": "code",
+        "url": "https://github.com/SohamRatnaparkhi/fed-llm-fintuning-and-blockchain"
+      }
     ]
   },
   {
     "id": 3,
-    "company": "Barclays",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/companies/barclays.png",
+    "link": "https://www.barclays.in/global-service-centre/btci/",
+    "company": "Barclays, Pune",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/exp/barclays.png",
     "position": "Technology Summer Intern",
     "startDate": "June 2024",
     "endDate": "July 2024",
@@ -39,12 +81,19 @@
       "Optimized backend query processing for a service handling 1000+ Kubernetes pods' data, reducing response time from 8 minutes to under 1 minute.",
       "Achieved performance gains through batching, multithreading, and caching with Redis.",
       "Developed a dynamic query system with 27 filters and 100+ sub-filters, significantly enhancing DevOps productivity."
+    ],
+    "techStack": [
+      "Kubernetes",
+      "SpringBoot",
+      "SQL",
+      "Redis"
     ]
   },
   {
     "id": 4,
+    "link": "https://litmuschaos.io/",
     "company": "LitmusChaos - CNCF",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/companies/litmus.png",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/exp/litmus.png",
     "position": "Linux Foundation Mentee",
     "startDate": "June 2023",
     "endDate": "Aug 2023",
@@ -53,6 +102,19 @@
       "Migrated critical GraphQL APIs to a REST architecture, resolving user issues and improving system reliability.",
       "Restructured the server package, reducing code duplication while achieving over 90% test coverage.",
       "Contributed to a major open-source CNCF sandbox project using Go, Kubernetes, and Docker."
+    ],
+    "techStack": [
+      "Go",
+      "Kubernetes",
+      "Docker",
+      "REST",
+      "GraphQL"
+    ],
+    "misc": [
+      {
+        "text": "code",
+        "url": "https://gist.github.com/SohamRatnaparkhi/723d18ee1114aeff4f37a7cb2cdb44bc"
+      }
     ]
   }
 ]

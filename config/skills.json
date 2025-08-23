@@ -16,17 +16,17 @@
   },
   {
     "name": "TypeScript",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/typescript.svg",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/ts.svg",
     "category": "Language"
   },
   {
     "name": "FastAPI",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/fastapi.svg",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/fastapi.png",
     "category": "Framework"
   },
   {
     "name": "PyTorch",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/pytorch.svg",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/pytorch.png",
     "category": "Framework"
   },
   {
@@ -40,14 +40,14 @@
     "category": "Framework"
   },
   {
-    "name": "React.js",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/react.svg",
-    "category": "Framework"
+    "name": "MongoDB",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/mongodb.svg",
+    "category": "Database"
   },
   {
-    "name": "Express.js",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/express.svg",
-    "category": "Framework"
+    "name": "Redis",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/redis.png",
+    "category": "Database"
   },
   {
     "name": "PostgreSQL",
@@ -60,28 +60,23 @@
     "category": "Database"
   },
   {
-    "name": "Redis",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/redis.svg",
-    "category": "Database"
-  },
-  {
     "name": "MongoDB",
     "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/mongodb.svg",
     "category": "Database"
   },
   {
     "name": "DynamoDB",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/dynamodb.svg",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/ddb.svg",
     "category": "Database"
   },
   {
     "name": "Pinecone",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/pinecone.svg",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/pinecone.png",
     "category": "Database"
   },
   {
     "name": "Weaviate",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/weaviate.svg",
+    "logo": "https://avatars.githubusercontent.com/u/37794290?s=48&v=48 ",
     "category": "Database"
   },
   {
