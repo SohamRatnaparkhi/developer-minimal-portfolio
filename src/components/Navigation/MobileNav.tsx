@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Home, User, Code, FolderOpen, Github, Linkedin, Twitter } from 'lucide-react';
 import profileData from '../../../config/profile.json';
+
+const SECTION_IDS = ['home', 'experience', 'skills', 'github', 'projects', 'extra-curriculars', 'blog'] as const;
 
 const MobileNav: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -13,6 +15,8 @@ const MobileNav: React.FC = () => {
     { id: 'extra-curriculars', icon: User },
     { id: 'blog', icon: Code },
   ];
+
+  const navItemIds = navItems.map(item => item.id);
 
   const socialLinks = [
     { icon: Github, href: profileData.socialLinks.github },
@@ -27,6 +31,76 @@ const MobileNav: React.FC = () => {
       setActiveSection(sectionId);
     }
   };
+
+  useEffect(() => {
+    const elements = SECTION_IDS
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible.length > 0) {
+          const currentId = (visible[0].target as HTMLElement).id;
+          
+          // Map sections to nav items
+          let navId = currentId;
+          if (currentId === 'github') {
+            // GitHub section maps to projects nav item since it's between skills and projects
+            navId = 'projects';
+          }
+          
+          // Only update if this section has a corresponding nav item
+          if (navItemIds.includes(navId)) {
+            setActiveSection(navId);
+          }
+        }
+      },
+      {
+        root: null,
+        // Focus on center portion of viewport for stable highlighting
+        rootMargin: '-30% 0px -30% 0px',
+        threshold: [0.1, 0.3, 0.5, 0.7, 1.0]
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    // Prime the active section on mount
+    const prime = () => {
+      let bestNavId = 'home';
+      let bestScore = Number.NEGATIVE_INFINITY;
+      elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const viewportCenter = window.innerHeight / 2;
+        const distanceToCenter = Math.abs(rect.top + rect.height / 2 - viewportCenter);
+        const score = -distanceToCenter; // closer to center => higher score
+        if (score > bestScore) {
+          bestScore = score;
+          // Map sections to nav items for consistency
+          let navId = el.id;
+          if (el.id === 'github') {
+            navId = 'projects';
+          }
+          // Only consider sections that have nav items
+          if (navItemIds.includes(navId)) {
+            bestNavId = navId;
+          }
+        }
+      });
+      setActiveSection(bestNavId);
+    };
+    
+    // Delay prime to ensure DOM is ready
+    setTimeout(prime, 100);
+
+    return () => observer.disconnect();
+  }, [navItemIds]);
 
   return (
     <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 md:hidden">
