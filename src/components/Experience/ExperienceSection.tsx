@@ -91,24 +91,9 @@ const ExperienceSection: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-
-                    {/* Tech Stack - Hidden on mobile */}
-                    {experience.techStack && experience.techStack.length > 0 && (
-                      <div className="hidden md:block mb-4">
-                        <h4 className="text-sm font-medium text-muted-foreground mb-2">Tech Stack</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {experience.techStack.map((tech, idx) => (
-                            <Badge key={idx} variant="outline" className="text-xs">
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
                     {/* Misc - Hidden on mobile */}
                     {experience.misc && experience.misc.length > 0 && (
-                      <div className="hidden md:block">
+                      <div className="hidden md:block  mb-4">
                         <div className="flex flex-wrap gap-3">
                           {experience.misc.map((item, idx) => (
                             <div key={idx} className="flex flex-wrap gap-3">
@@ -139,6 +124,19 @@ const ExperienceSection: React.FC = () => {
                                 </a>
                               )}
                             </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    {/* Tech Stack - Hidden on mobile */}
+                    {experience.techStack && experience.techStack.length > 0 && (
+                      <div className="hidden md:block">
+                        {/* <h4 className="text-sm font-medium text-muted-foreground mb-2">Tech Stack</h4> */}
+                        <div className="flex flex-wrap gap-2">
+                          {experience.techStack.map((tech, idx) => (
+                            <Badge key={idx} variant="outline" className="text-xs">
+                              {tech}
+                            </Badge>
                           ))}
                         </div>
                       </div>

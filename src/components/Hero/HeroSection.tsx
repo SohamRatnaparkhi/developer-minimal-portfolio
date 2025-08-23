@@ -207,8 +207,22 @@ const HeroSection: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 animate-float">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-hero-accent p-1 shadow-strong">
-              <div className="w-full h-full rounded-full bg-muted flex items-center justify-center text-4xl font-bold text-primary">
-                {profileData.name.split(' ').map(n => n[0]).join('')}
+              <div className="w-full h-full rounded-full bg-muted flex items-center justify-center overflow-hidden">
+                <img 
+                  src={profileData.profileImage} 
+                  alt={`${profileData.name} profile picture`}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback to initials if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <div className="w-full h-full rounded-full bg-muted flex items-center justify-center text-4xl font-bold text-primary" style={{ display: 'none' }}>
+                  {profileData.name.split(' ').map(n => n[0]).join('')}
+                </div>
               </div>
             </div>
           </div>
