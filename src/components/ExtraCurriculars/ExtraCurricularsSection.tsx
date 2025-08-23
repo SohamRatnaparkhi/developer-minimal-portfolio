@@ -78,7 +78,7 @@ const ExtraCurricularsSection: React.FC = () => {
 
   return (
     <section id="extra-curriculars" className="py-20">
-      <div className="container mx-auto px-6 w-1/2">
+      <div className="container mx-auto px-6 w-full md:w-2/3 lg:w-1/2">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
