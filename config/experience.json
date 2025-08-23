@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "company": "Findr AI",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/companies/findr.png",
+    "position": "Product Engineer",
+    "startDate": "April 2025",
+    "endDate": "Present",
+    "current": true,
+    "responsibilities": [
+      "Developed Pro-Search, a production-grade RAG system with constrained chain-of-thought planning and optimal multi-step retrieval.",
+      "Built specialized AI agents with a Model-Context-Protocol framework enabling context-aware application integration with 80% accuracy.",
+      "Optimized backend with multi-threading and auto-scalable servers, reducing time-to-first-token from over 10s to under 5s."
+    ]
+  },
+  {
+    "id": 2,
+    "company": "University of Windsor",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/companies/windsor.png",
+    "position": "Research Intern",
+    "startDate": "Aug 2024",
+    "endDate": "Oct 2024",
+    "current": false,
+    "responsibilities": [
+      "Fine-tuned 40+ LLMs (3B-70B parameters) using QLoRA and federated learning, achieving SOTA results on medical and financial datasets.",
+      "Implemented a privacy-preserving distributed training architecture, demonstrating 22% lower variance than traditional fine-tuning.",
+      "Worked with Python, PyTorch, Hugging Face, PEFT, and QLoRA in a distributed systems environment."
+    ]
+  },
+  {
+    "id": 3,
+    "company": "Barclays",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/companies/barclays.png",
+    "position": "Technology Summer Intern",
+    "startDate": "June 2024",
+    "endDate": "July 2024",
+    "current": false,
+    "responsibilities": [
+      "Optimized backend query processing for a service handling 1000+ Kubernetes pods' data, reducing response time from 8 minutes to under 1 minute.",
+      "Achieved performance gains through batching, multithreading, and caching with Redis.",
+      "Developed a dynamic query system with 27 filters and 100+ sub-filters, significantly enhancing DevOps productivity."
+    ]
+  },
+  {
+    "id": 4,
+    "company": "LitmusChaos - CNCF",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/companies/litmus.png",
+    "position": "Linux Foundation Mentee",
+    "startDate": "June 2023",
+    "endDate": "Aug 2023",
+    "current": false,
+    "responsibilities": [
+      "Migrated critical GraphQL APIs to a REST architecture, resolving user issues and improving system reliability.",
+      "Restructured the server package, reducing code duplication while achieving over 90% test coverage.",
+      "Contributed to a major open-source CNCF sandbox project using Go, Kubernetes, and Docker."
+    ]
+  }
+]

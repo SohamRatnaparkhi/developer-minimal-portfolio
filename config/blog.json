@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Beginner guide to deploying Micro-services on Kubernetes",
+    "excerpt": "In today's fast-paced digital landscape, businesses are increasingly adopting microservices architecture to build scalable and resilient applications...",
+    "date": "2023-05-23",
+    "published": true,
+    "readTime": "15 mins",
+    "featured": true,
+    "url": "https://sohamr.hashnode.dev/beginner-guide-to-deploying-micro-services-on-kubernetes",
+    "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1684879002236/2a94e50f-df85-494c-9d94-0799010b906e.avif",
+    "tags": [
+      "Kubernetes",
+      "Microservices",
+      "DevOps"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Next.js 13.4: Everything You Need to Know (Part - 1)",
+    "excerpt": "Next.js is a React framework that enables you to build fast, dynamic, and SEO-friendly web apps with ease. It provides features such as file-system-based routing...",
+    "date": "2023-05-15",
+    "published": true,
+    "readTime": "5 mins",
+    "featured": true,
+    "url": "https://sohamr.hashnode.dev/nextjs-13-everything-you-need-to-know",
+    "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1684178061508/965d180d-32ce-4d6d-8bbf-498a5687220f.png",
+    "tags": [
+      "Next.js",
+      "React",
+      "Web Development"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "What is contributing to open-source and how to contribute to open-source programs 2023",
+    "excerpt": "Depending on the project you're working on, contributing to open source may be frightening and perplexing. However, as proven, there are many chances for newcomers...",
+    "date": "2022-12-07",
+    "published": true,
+    "readTime": "5 mins",
+    "featured": true,
+    "url": "https://sohamr.hashnode.dev/what-is-contributing-to-open-source-and-how-to-contribute-to-open-source-programs-2023",
+    "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1670386427119/jvIcnxOIs.jpeg",
+    "tags": [
+      "Open Source",
+      "Contribution",
+      "Git"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Finite State Automata",
+    "excerpt": "An automata, also known as an abstract machine or model, is anything that is examined in order to find solutions to difficult mathematical problems...",
+    "date": "2022-11-23",
+    "published": true,
+    "readTime": "10 mins",
+    "featured": true,
+    "url": "https://sohamr.hashnode.dev/finite-state-automata",
+    "image": "https://cdn.hashnode.com/res/hashnode/image/unsplash/xG8IQMqMITM/upload/v1669224714646/LaqugFGS7.jpeg",
+    "tags": [
+      "Computer Science",
+      "Theory of Computation"
+    ]
+  }
+]

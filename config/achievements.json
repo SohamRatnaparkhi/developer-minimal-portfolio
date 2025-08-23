@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Winner, Google GenAI Hackathon 2024",
+    "description": "Secured first place in the BigBasket track against over 1,000 participants in a national-level hackathon.",
+    "date": "2024",
+    "category": "Competition",
+    "icon": "🏆",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "MITACS Globalink Research Intern",
+    "description": "Awarded the prestigious research internship with a <15% acceptance rate among thousands of international applicants.",
+    "date": "2024",
+    "category": "Academia",
+    "icon": "🎓",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Global Web3 Hackathon Winner",
+    "description": "Won prizes at multiple international Web3 hackathons, including ETHIndia 2022 & 2023, ETHForAll 2023, and FVM Spacewarp 2023.",
+    "date": "2023",
+    "category": "Competition",
+    "icon": "💻",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Microsoft Learn Student Ambassador & President",
+    "description": "Led a community of 50+ students, organizing national hackathons and technical bootcamps.",
+    "date": "2023",
+    "category": "Leadership",
+    "icon": "🎤",
+    "featured": true
+  }
+]

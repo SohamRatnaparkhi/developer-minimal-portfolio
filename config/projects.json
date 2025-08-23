@@ -1,0 +1,185 @@
+[
+  {
+    "id": 1,
+    "name": "MindKeeper AI",
+    "description": "An AI-powered second brain with over 400 active users, featuring an optimized Contextual RAG implementation.",
+    "longDescription": "Built a production-ready version of Anthropic's Contextual RAG with HyDe and multi-step retrieval, serving over 400 users. Engineered a high-performance backend using FastAPI with optimized chunking, embedding, and caching strategies to handle thousands of documents per user.",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/mindkeeper-ai/banner.jpg",
+    "images": [
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/mindkeeper-ai/1.jpg"
+    ],
+    "techStack": [
+      "FastAPI",
+      "Python",
+      "RAG",
+      "Pinecone",
+      "Redis",
+      "AWS Lambda",
+      "Next JS"
+    ],
+    "githubUrl": "https://github.com/SohamRatnaparkhi/cortex-cache-ai-backend",
+    "liveUrl": "https://home.mindkeeperai.com/",
+    "featured": true,
+    "isOpenSource": true,
+    "category": "AI/ML"
+  },
+  {
+    "id": 2,
+    "name": "Navigator AI",
+    "description": "An open-source, self-learning browser automation agent with a self-improving memory layer.",
+    "longDescription": "Developed an open-source browser automation agent with custom DOM parsers, reducing token usage by 90%. Implemented a self-improving memory layer using RAGs that learns from user interactions to personalize automation patterns for recurring tasks.",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/navigator-ai/banner.jpg",
+    "images": [
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/navigator-ai/demo1.gif",
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/navigator-ai/demo2.gif"
+    ],
+    "techStack": [
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "Weaviate",
+      "Docker",
+      "Python"
+    ],
+    "githubUrl": "https://github.com/SohamRatnaparkhi/navigator-ai",
+    "liveUrl": "",
+    "featured": true,
+    "isOpenSource": true,
+    "category": "AI/Automation"
+  },
+  {
+    "id": 3,
+    "name": "BannerCraft",
+    "description": "Won 1st place at Google GenAI Hackathon. An AI platform for effortless, custom banner creation.",
+    "longDescription": "A revolutionary platform for generating customized promotional banners. Users upload a product image and theme, and our advanced AI generates a professional banner. Includes a comprehensive editing suite and a chatbot for generating custom images and stickers.",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/banner.jpg",
+    "images": [
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/1.jpg"
+    ],
+    "techStack": [
+      "Gemini",
+      "Imagen3",
+      "Python",
+      "React",
+      "Computer Vision"
+    ],
+    "githubUrl": "https://github.com/SohamRatnaparkhi/gen-ai-hacs",
+    "liveUrl": "",
+    "featured": true,
+    "isOpenSource": true,
+    "category": "AI/ML"
+  },
+  {
+    "id": 4,
+    "name": "Microservice Blogging Platform",
+    "description": "A scalable blogging platform architected with 4 microservices in Go, ensuring high availability with HAProxy.",
+    "longDescription": "Architected a scalable blogging platform using a microservices pattern with 4 distinct services (authentication, blog, feed, user). Achieved high availability and load balancing with HAProxy. Implemented horizontal scaling with containerized services and a caching layer with Redis for consistent performance.",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/microservice-blogging/banner.jpg",
+    "images": [
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/microservice-blogging/1.png"
+    ],
+    "techStack": [
+      "Go",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "HAProxy",
+      "JWT"
+    ],
+    "githubUrl": "https://github.com/SohamRatnaparkhi/blogx-backend-go",
+    "liveUrl": "",
+    "featured": true,
+    "isOpenSource": true,
+    "category": "Backend"
+  },
+  {
+    "id": 5,
+    "name": "LitmusChaos Contributions",
+    "description": "Contributed to a CNCF sandbox project for chaos engineering as a Linux Foundation Mentee.",
+    "longDescription": "As a mentee under the Linux Foundation Mentorship Program, I contributed to LitmusChaos by migrating critical GraphQL APIs to REST, improving system reliability, and restructuring the server package to reduce code duplication and increase test coverage to over 90%.",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/litmus/litmus1.png",
+    "images": [
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/litmus/litmus1.png"
+    ],
+    "techStack": [
+      "GoLang",
+      "Kubernetes",
+      "Docker",
+      "GraphQL",
+      "REST"
+    ],
+    "githubUrl": "https://github.com/litmuschaos/litmus/issues?q=author%3A%40me+sort%3Aupdated-desc+",
+    "liveUrl": "https://mentorship.lfx.linuxfoundation.org/project/983193ea-9cca-405f-baa5-e6ade4df1ba2",
+    "featured": false,
+    "isOpenSource": true,
+    "category": "DevOps"
+  },
+  {
+    "id": 6,
+    "name": "Blog-X",
+    "description": "A decentralized blogging platform built on the Ethereum blockchain, allowing users to interact and share thoughts.",
+    "longDescription": "A decentralized blogging platform where users can interact with each other and share their thoughts and ideas. It is built on top of the Ethereum blockchain using Web3.js and Push protocols for real-time communication.",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/blogx/blogx1.png",
+    "images": [
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/blogx/blogx1.png",
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/blogx/blogx2.png",
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/blogx/blogx3.png"
+    ],
+    "techStack": [
+      "Next.JS",
+      "MongoDB",
+      "Node.JS",
+      "Web3.js",
+      "Ethereum",
+      "Push protocols"
+    ],
+    "githubUrl": "https://github.com/Blog-X/blog_x",
+    "liveUrl": "https://blog-x-omega.vercel.app/",
+    "featured": false,
+    "isOpenSource": true,
+    "category": "Web3"
+  },
+  {
+    "id": 7,
+    "name": "Brain Tumor Detector",
+    "description": "A web application to detect brain tumors from MRI images using CNN models built with Tensorflow and Keras.",
+    "longDescription": "This project involves a web application which can detect brain tumor from MRI images with the help of deep learning models (CNN models). The web application is built using Flask and the model is trained using Tensorflow and Keras.",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/btd/btd1.jpg",
+    "images": [
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/btd/btd1.jpg",
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/btd/btd2.jpg"
+    ],
+    "techStack": [
+      "Python",
+      "Flask",
+      "Tensorflow",
+      "Keras",
+      "HTML",
+      "CSS"
+    ],
+    "githubUrl": "https://github.com/SohamRatnaparkhi/BTD_Web",
+    "liveUrl": "",
+    "featured": false,
+    "isOpenSource": true,
+    "category": "AI/ML"
+  },
+  {
+    "id": 8,
+    "name": "Voice Assistant",
+    "description": "A CLI tool that performs common tasks like opening websites, playing music, and reading PDF/DOCX files aloud.",
+    "longDescription": "A CLI Voice Assistant tool which can perform various common tasks like opening websites, playing music, sending emails, etc. The USP of this project is that it can be used as a book reader as it can convert the text in .pdf and .docs files to audio and play it page by page.",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/va/va1.png",
+    "images": [
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/va/va1.png"
+    ],
+    "techStack": [
+      "Python",
+      "gTTS"
+    ],
+    "githubUrl": "https://github.com/SohamRatnaparkhi/Voice-Assistant",
+    "liveUrl": "https://github.com/SohamRatnaparkhi/Voice-Assistant/releases/download/v1.0.0/VoiceAssistant.exe",
+    "featured": false,
+    "isOpenSource": true,
+    "category": "Tooling"
+  }
+]

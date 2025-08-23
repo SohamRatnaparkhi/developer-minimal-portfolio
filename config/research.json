@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Text-to-speech and speech-to-text converter—voice assistant",
+    "authors": [
+      "S Janokar",
+      "S Ratnaparkhi",
+      "M Rathi",
+      "A Rathod"
+    ],
+    "publication": "Inventive Systems and Control: Proceedings of ICISC 2023",
+    "date": "2023",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IRU_Fy4AAAAJ&citation_for_view=IRU_Fy4AAAAJ:d1gkVwhDpl0C",
+    "category": "AI/ML",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Deepfake detection for preventing Audio and Video frauds using Advanced Deep Learning Techniques",
+    "authors": [
+      "R Bharadwaj",
+      "S Ratnaparkhi",
+      "R Rajpurohit",
+      "K Rahate",
+      "R Pandita"
+    ],
+    "publication": "2023 International Conference on Integrated Intelligence and Communication",
+    "date": "2023",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IRU_Fy4AAAAJ&citation_for_view=IRU_Fy4AAAAJ:u-x6o8ySG0sC",
+    "category": "Deep Learning",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Next Generation Social Media Platform to Move from Centralization to Decentralization of Data",
+    "authors": [
+      "ML Dhore",
+      "S Ratnaparkhi",
+      "R Sasne",
+      "O Surase",
+      "R Chandak"
+    ],
+    "publication": "2023 7th International Conference On Computing, Communication, Control And...",
+    "date": "2023",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IRU_Fy4AAAAJ&citation_for_view=IRU_Fy4AAAAJ:u5HHmVD_uO8C",
+    "category": "Web3",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Driver Drowsiness Detection Using CNN and ESP32 CAM",
+    "authors": [
+      "V Bhanuse",
+      "S Ratnaparkhi",
+      "R Loya",
+      "R Sasne",
+      "T Rokade"
+    ],
+    "publication": "International Conference on Data Science, Computation and Security",
+    "date": "2023",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IRU_Fy4AAAAJ&citation_for_view=IRU_Fy4AAAAJ:2osOgNQ5qMEC",
+    "category": "Computer Vision",
+    "featured": true
+  }
+]

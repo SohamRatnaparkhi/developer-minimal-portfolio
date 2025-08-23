@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Python",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/python.svg",
+    "category": "Language"
+  },
+  {
+    "name": "Java",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/java.svg",
+    "category": "Language"
+  },
+  {
+    "name": "GoLang",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/golang.svg",
+    "category": "Language"
+  },
+  {
+    "name": "TypeScript",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/typescript.svg",
+    "category": "Language"
+  },
+  {
+    "name": "FastAPI",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/fastapi.svg",
+    "category": "Framework"
+  },
+  {
+    "name": "PyTorch",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/pytorch.svg",
+    "category": "Framework"
+  },
+  {
+    "name": "TensorFlow",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/tensorflow.svg",
+    "category": "Framework"
+  },
+  {
+    "name": "Next.js",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/nextjs.svg",
+    "category": "Framework"
+  },
+  {
+    "name": "React.js",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/react.svg",
+    "category": "Framework"
+  },
+  {
+    "name": "Express.js",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/express.svg",
+    "category": "Framework"
+  },
+  {
+    "name": "PostgreSQL",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/postgresql.svg",
+    "category": "Database"
+  },
+  {
+    "name": "MySQL",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/mysql.svg",
+    "category": "Database"
+  },
+  {
+    "name": "Redis",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/redis.svg",
+    "category": "Database"
+  },
+  {
+    "name": "MongoDB",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/mongodb.svg",
+    "category": "Database"
+  },
+  {
+    "name": "DynamoDB",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/dynamodb.svg",
+    "category": "Database"
+  },
+  {
+    "name": "Pinecone",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/pinecone.svg",
+    "category": "Database"
+  },
+  {
+    "name": "Weaviate",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/weaviate.svg",
+    "category": "Database"
+  },
+  {
+    "name": "Git",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/git.svg",
+    "category": "Tools"
+  },
+  {
+    "name": "Docker",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/docker.svg",
+    "category": "Tools"
+  },
+  {
+    "name": "Kubernetes",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/kubernetes.svg",
+    "category": "Tools"
+  },
+  {
+    "name": "AWS",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/aws.svg",
+    "category": "Tools"
+  }
+]
