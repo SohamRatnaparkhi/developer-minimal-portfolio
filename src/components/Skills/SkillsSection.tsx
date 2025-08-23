@@ -26,7 +26,7 @@ const SkillsSection: React.FC = () => {
         </div>
 
         {/* Mobile: Categorized tabs with continuous marquee */}
-        <Tabs defaultValue="all" className="w-full md:hidden">
+        <Tabs defaultValue="languages" className="w-full md:hidden">
           <TabsList className="grid w-full grid-cols-4 mb-8">
             {/* <TabsTrigger value="all" className="flex flex-col items-center gap-1 p-1">
               <Code className="w-5 h-5" />
