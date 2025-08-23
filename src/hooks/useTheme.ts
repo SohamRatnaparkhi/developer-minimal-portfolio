@@ -6,11 +6,9 @@ function getCurrentIsDark(): boolean {
     if (stored === 'dark') return true;
     if (stored === 'light') return false;
   } catch {
-    // no-op for SSR or blocked storage
+    return false;
   }
-  const hasDarkClass = document.documentElement.classList.contains('dark');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  return hasDarkClass || prefersDark;
+  return false;
 }
 
 export const useTheme = () => {
@@ -54,10 +52,10 @@ export const useTheme = () => {
     setIsDark(nextIsDark);
     if (nextIsDark) {
       document.documentElement.classList.add('dark');
-      try { localStorage.setItem('theme', 'dark'); } catch {}
+      try { localStorage.setItem('theme', 'dark'); } catch { /* empty */ }
     } else {
       document.documentElement.classList.remove('dark');
-      try { localStorage.setItem('theme', 'light'); } catch {}
+      try { localStorage.setItem('theme', 'light'); } catch { /* empty */ }
     }
   };
 

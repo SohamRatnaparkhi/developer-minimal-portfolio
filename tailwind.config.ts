@@ -74,7 +74,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+				mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+				signature: ['Sacramento', 'cursive']
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
