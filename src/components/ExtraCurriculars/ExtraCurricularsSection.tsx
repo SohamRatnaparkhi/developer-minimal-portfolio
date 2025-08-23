@@ -306,34 +306,6 @@ const ExtraCurricularsSection: React.FC = () => {
           </TabsContent>
         </Tabs>
 
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">
-              {researchData.length}
-            </div>
-            <div className="text-sm text-muted-foreground">Research Papers</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">
-              {achievementsData.length}
-            </div>
-            <div className="text-sm text-muted-foreground">Achievements</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">
-              {achievementsData.filter(a => a.category === 'Competition').length}
-            </div>
-            <div className="text-sm text-muted-foreground">Competitions</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">
-              {achievementsData.filter(a => a.category === 'Recognition').length}
-            </div>
-            <div className="text-sm text-muted-foreground">Recognition</div>
-          </div>
-        </div>
-
         {/* Research Modal */}
         <ResearchModal
           research={selectedResearch}
