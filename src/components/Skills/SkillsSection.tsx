@@ -1,7 +1,7 @@
 import React from 'react';
 import skillsData from '../../../config/skills.json';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Code, Database, Wrench, MoreHorizontal } from 'lucide-react';
+import { Code, Database, Wrench, Layers3 } from 'lucide-react';
 
 const SkillsSection: React.FC = () => {
   // Group skills for mobile tabs
@@ -9,11 +9,8 @@ const SkillsSection: React.FC = () => {
   const frameworks = skillsData.filter((s) => s.category === 'Framework');
   const databases = skillsData.filter((s) => s.category === 'Database');
   const tools = skillsData.filter((s) => s.category === 'Tools');
-  const others = skillsData.filter(
-    (s) => !['Language', 'Framework', 'Database', 'Tools'].includes(s.category)
-  );
 
-  console.log(languages, frameworks, databases, tools, others);
+  const allSkills = skillsData;
 
   return (
     <section id="skills" className="py-20">
@@ -29,10 +26,16 @@ const SkillsSection: React.FC = () => {
         </div>
 
         {/* Mobile: Categorized tabs with continuous marquee */}
-        <Tabs defaultValue="languages" className="w-full md:hidden">
+        <Tabs defaultValue="all" className="w-full md:hidden">
           <TabsList className="grid w-full grid-cols-4 mb-8">
+            {/* <TabsTrigger value="all" className="flex flex-col items-center gap-1 p-1">
+              <Code className="w-5 h-5" />
+            </TabsTrigger> */}
             <TabsTrigger value="languages" className="flex flex-col items-center gap-1 p-1">
               <Code className="w-5 h-5" />
+            </TabsTrigger>
+            <TabsTrigger value="frameworks" className="flex flex-col items-center gap-1 p-1">
+              <Layers3 className="w-5 h-5" />
             </TabsTrigger>
             <TabsTrigger value="databases" className="flex flex-col items-center gap-1 p-1">
               <Database className="w-5 h-5" />
@@ -40,24 +43,22 @@ const SkillsSection: React.FC = () => {
             <TabsTrigger value="tools" className="flex flex-col items-center gap-1 p-1">
               <Wrench className="w-5 h-5" />
             </TabsTrigger>
-            <TabsTrigger value="others" className="flex flex-col items-center gap-1 p-1">
-              <MoreHorizontal className="w-5 h-5" />
-            </TabsTrigger>
           </TabsList>
 
           {[
+            // { key: 'all', data: allSkills },
             { key: 'languages', data: languages },
+            { key: 'frameworks', data: frameworks },
             { key: 'databases', data: databases },
             { key: 'tools', data: tools },
-            { key: 'others', data: others },
           ].map(({ key, data }) => (
             <TabsContent key={key} value={key} className="mt-0">
               <div className="relative overflow-hidden">
-                <div className="flex gap-4 animate-slide py-2">
+                <div className="animate-slide-smooth flex flex-nowrap gap-4 w-max py-2">
                   {[...data, ...data].map((skill, i) => (
                     <div
                       key={`${skill.name}-${i}`}
-                      className="skill-item bg-card rounded-lg p-4 border border-border/50 hover:border-primary/20 transition-all flex-shrink-0 w-48"
+                      className="skill-item bg-card rounded-lg p-2 border border-border/50 hover:border-primary/20 transition-all flex-shrink-0 w-48"
                     >
                       <div className="flex flex-col items-center space-y-2">
                         <div className="w-16 h-16 bg-white/90 rounded-lg flex items-center justify-center p-1 shadow-sm border border-gray-100">

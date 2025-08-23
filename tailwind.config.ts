@@ -85,8 +85,10 @@ export default {
 			animation: {
 				'float': 'float 6s ease-in-out infinite',
 				'slide': 'slide 8s linear infinite',
+				'slide-smooth': 'slide-smooth 5s linear infinite',
+				'slide-smooth-fast': 'slide-smooth 10s linear infinite',
 				'slide-mobile': 'slide 15s linear infinite',
-				'slide-mobile-fast': 'slide-mobile-fast 10s linear infinite',
+				'slide-mobile-fast': 'slide-mobile-fast 5s linear infinite',
 				'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
@@ -99,6 +101,14 @@ export default {
 				slide: {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(-100%)' }
+				},
+				'slide-smooth': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
+				},
+				'slide-smooth-fast': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
 				},
 				'slide-mobile-fast': {
 					'0%': { transform: 'translateX(0)' },

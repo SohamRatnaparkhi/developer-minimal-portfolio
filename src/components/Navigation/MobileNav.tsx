@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { Home, User, Code, FolderOpen, Github, Linkedin, Twitter } from 'lucide-react';
+import { Home, User, Code, FolderOpen, Github, Linkedin, Twitter, Sun, Moon } from 'lucide-react';
 import profileData from '../../../config/profile.json';
+import { useTheme } from '../../hooks/useTheme';
 
 const SECTION_IDS = ['home', 'experience', 'skills', 'github', 'projects', 'extra-curriculars', 'blog'] as const;
 
 const MobileNav: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const { isDark, toggleTheme } = useTheme();
+  const handleToggleTheme = () => {
+    const html = document.documentElement;
+    html.classList.add('transition-colors', 'duration-300');
+    toggleTheme();
+    window.setTimeout(() => {
+      html.classList.remove('transition-colors', 'duration-300');
+    }, 350);
+  };
 
   const navItems = [
     { id: 'home', icon: Home },
@@ -104,7 +114,7 @@ const MobileNav: React.FC = () => {
 
   return (
     <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 md:hidden">
-      <div className="mobile-nav-pill rounded-2xl px-4 py-3">
+      <div className="mobile-nav-pill rounded-2xl px-4 py-3 m-2">
         {/* Single row for larger mobile screens (sm and up) */}
         <div className="hidden sm:flex items-center space-x-6">
           {/* Navigation Icons */}
@@ -137,6 +147,19 @@ const MobileNav: React.FC = () => {
               <social.icon className="h-4 w-4" />
             </a>
           ))}
+
+          {/* Theme Toggle */}
+          <button
+            onClick={handleToggleTheme}
+            aria-label="Toggle theme"
+            className="p-2 rounded-full text-muted-foreground hover:text-primary transition-colors"
+          >
+            {isDark ? (
+              <Sun className="h-4 w-4" />
+            ) : (
+              <Moon className="h-4 w-4" />
+            )}
+          </button>
         </div>
 
         {/* Two rows for small mobile screens */}
@@ -158,7 +181,7 @@ const MobileNav: React.FC = () => {
             ))}
           </div>
           
-          {/* Second row - Social Links */}
+          {/* Second row - Social Links + Theme Toggle */}
           <div className="flex items-center justify-center space-x-6">
             {socialLinks.map((social, index) => (
               <a
@@ -171,6 +194,17 @@ const MobileNav: React.FC = () => {
                 <social.icon className="h-4 w-4" />
               </a>
             ))}
+            <button
+              onClick={handleToggleTheme}
+              aria-label="Toggle theme"
+              className="p-2 rounded-full text-muted-foreground hover:text-primary transition-colors"
+            >
+              {isDark ? (
+                <Sun className="h-4 w-4" />
+              ) : (
+                <Moon className="h-4 w-4" />
+              )}
+            </button>
           </div>
         </div>
       </div>
