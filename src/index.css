@@ -172,6 +172,14 @@ All colors MUST be HSL.
     border-bottom: 1px solid hsl(var(--border) / 0.5);
   }
 
+  /* Subtle, theme-aware section surface for visual separation */
+  .section-surface {
+    background-color: hsl(var(--background) / 0.6);
+    border: 1px solid hsl(var(--border) / 0.35);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+  }
+
   .mobile-nav-pill {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -209,6 +217,25 @@ All colors MUST be HSL.
   }
 
   .achievement-card:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Improve Extra-Curriculars cards appearance */
+  .research-card,
+  .achievement-card,
+  .research-card-mobile,
+  .achievement-card-mobile {
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-soft);
+    /* Subtle gradient tint so cards stand out from background in both themes */
+    background-image: linear-gradient(135deg, hsl(var(--muted) / 0.08), hsl(var(--muted) / 0));
+  }
+
+  .research-card:hover,
+  .achievement-card:hover,
+  .research-card-mobile:hover,
+  .achievement-card-mobile:hover {
+    box-shadow: var(--shadow-medium);
     transform: translateY(-4px);
   }
 

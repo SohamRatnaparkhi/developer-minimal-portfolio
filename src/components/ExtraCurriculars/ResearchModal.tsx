@@ -7,7 +7,7 @@ import { Calendar, ExternalLink, Users } from 'lucide-react';
 interface Research {
   id: number;
   title: string;
-  description: string;
+  description?: string;
   authors: string[];
   publication: string;
   date: string;
@@ -63,11 +63,11 @@ const ResearchModal: React.FC<ResearchModalProps> = ({ research, isOpen, onClose
             </div>
           </div>
 
-          {/* Description */}
+          {/* Publication / Link */}
           <div>
-            <h3 className="text-lg font-semibold mb-3">Abstract</h3>
+            <h3 className="text-lg font-semibold mb-3">Publication</h3>
             <p className="text-muted-foreground leading-relaxed">
-              {research.description}
+              {research.publication}
             </p>
           </div>
 

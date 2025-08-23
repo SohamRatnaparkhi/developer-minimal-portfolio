@@ -7,17 +7,39 @@ import achievementsData from '../../../config/achievements.json';
 import researchData from '../../../config/research.json';
 import ResearchModal from './ResearchModal';
 
+interface Research {
+  id: number;
+  title: string;
+  description?: string;
+  authors: string[];
+  publication: string;
+  date: string;
+  link: string;
+  category: string;
+  featured: boolean;
+}
+
+interface Achievement {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  category: string;
+  icon: string;
+  featured: boolean;
+}
+
 const ExtraCurricularsSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(true);
-  const [selectedResearch, setSelectedResearch] = useState<any>(null);
+  const [selectedResearch, setSelectedResearch] = useState<Research | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentResearchIndex, setCurrentResearchIndex] = useState(0);
   const [currentAchievementIndex, setCurrentAchievementIndex] = useState(0);
   const researchScrollRef = useRef<HTMLDivElement>(null);
   const achievementScrollRef = useRef<HTMLDivElement>(null);
 
-  const featuredAchievements = achievementsData.filter(achievement => achievement.featured);
-  const featuredResearch = researchData.filter(research => research.featured);
+  const featuredAchievements = (achievementsData as Achievement[]).filter(achievement => achievement.featured);
+  const featuredResearch = (researchData as Research[]).filter(research => research.featured);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -26,7 +48,7 @@ const ExtraCurricularsSection: React.FC = () => {
     });
   };
 
-  const handleResearchClick = (research: any) => {
+  const handleResearchClick = (research: Research) => {
     setSelectedResearch(research);
     setIsModalOpen(true);
   };
@@ -69,8 +91,15 @@ const ExtraCurricularsSection: React.FC = () => {
     if (!isPlaying) return;
 
     const interval = setInterval(() => {
-      scrollToNext('research');
-      scrollToNext('achievement');
+      // advance research
+      const nextResearchIndex = (currentResearchIndex + 1) % featuredResearch.length;
+      setCurrentResearchIndex(nextResearchIndex);
+      scrollToItem(researchScrollRef.current, nextResearchIndex);
+
+      // advance achievements
+      const nextAchievementIndex = (currentAchievementIndex + 1) % featuredAchievements.length;
+      setCurrentAchievementIndex(nextAchievementIndex);
+      scrollToItem(achievementScrollRef.current, nextAchievementIndex);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -78,7 +107,7 @@ const ExtraCurricularsSection: React.FC = () => {
 
   return (
     <section id="extra-curriculars" className="py-20">
-      <div className="container mx-auto px-6 w-full md:w-2/3 lg:w-1/2">
+      <div className="container mx-auto px-6 w-full md:w-2/3 lg:w-1/2 section-surface p-6 md:p-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
@@ -115,7 +144,7 @@ const ExtraCurricularsSection: React.FC = () => {
                     {research.title}
                   </h3>
                   <p className="text-muted-foreground mb-4 text-sm leading-relaxed line-clamp-3">
-                    {research.description}
+                    {research.publication}
                   </p>
                   <div className="flex items-center text-xs text-muted-foreground">
                     <Calendar className="h-3 w-3 mr-1" />
