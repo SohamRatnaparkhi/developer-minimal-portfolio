@@ -31,7 +31,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, isOpen
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-[95vw] max-h-[90vh] overflow-y-auto overflow-x-hidden">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">{project.name}</DialogTitle>
         </DialogHeader>
@@ -45,21 +45,21 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, isOpen
           </div>
 
           {/* Project Info */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex min-w-0 items-center gap-4">
               <div className="w-12 h-12 bg-gradient-to-br from-project-accent to-project-accent/70 rounded-lg flex items-center justify-center">
                 <span className="text-xl font-bold text-white">
                   {project.name.charAt(0)}
                 </span>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold">{project.name}</h3>
+              <div className="min-w-0">
+                <h3 className="text-xl font-semibold truncate">{project.name}</h3>
                 <Badge variant="outline">{project.category}</Badge>
               </div>
             </div>
             
             {/* Action Buttons */}
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               {project.isOpenSource && (
                 <Button variant="outline" size="sm" asChild>
                   <a
@@ -92,7 +92,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, isOpen
           {/* Description */}
           <div>
             <h4 className="text-lg font-semibold mb-3">About This Project</h4>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed break-words">
               {project.longDescription}
             </p>
           </div>
@@ -113,7 +113,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, isOpen
           {project.images && project.images.length > 0 && (
             <div>
               <h4 className="text-lg font-semibold mb-3">Gallery</h4>
-              <Carousel className="w-full">
+              <Carousel className="w-full overflow-x-hidden">
                 <CarouselContent>
                   {project.images.map((image, index) => (
                     <CarouselItem key={index}>
