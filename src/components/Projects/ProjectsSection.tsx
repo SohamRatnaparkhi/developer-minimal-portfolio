@@ -37,11 +37,21 @@ const ProjectsSection: React.FC = () => {
               className="project-card bg-card rounded-lg overflow-hidden border border-border/50"
             >
               {/* Project Image */}
-              <div className="h-32 bg-gradient-to-br from-project-accent/20 to-project-accent/10 flex items-center justify-center">
-                <div className="text-3xl font-bold text-project-accent">
-                  {project.name.charAt(0)}
+              {project.image && project.image.trim() !== '' ? (
+                <div className="h-32 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={`${project.name} project`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-              </div>
+              ) : (
+                <div className="h-32 bg-gradient-to-br from-project-accent/20 to-project-accent/10 flex items-center justify-center">
+                  <div className="text-3xl font-bold text-project-accent">
+                    {project.name.charAt(0)}
+                  </div>
+                </div>
+              )}
 
               {/* Project Content */}
               <div className="p-4">

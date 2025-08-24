@@ -12,8 +12,9 @@ interface Project {
   longDescription: string;
   image: string;
   images: string[];
+  videos?: string[];
   techStack: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl: string;
   featured: boolean;
   isOpenSource: boolean;
@@ -38,11 +39,21 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, isOpen
 
         <div className="space-y-6">
           {/* Banner Image */}
-          <div className="h-64 bg-gradient-to-br from-project-accent/20 to-project-accent/10 rounded-lg flex items-center justify-center">
-            <div className="text-6xl font-bold text-project-accent">
-              {project.name.charAt(0)}
+          {project.image && project.image.trim() !== '' ? (
+            <div className="h-64 overflow-hidden rounded-lg">
+              <img 
+                src={project.image} 
+                alt={`${project.name} project banner`}
+                className="w-full h-full object-cover"
+              />
             </div>
-          </div>
+          ) : (
+            <div className="h-64 bg-gradient-to-br from-project-accent/20 to-project-accent/10 rounded-lg flex items-center justify-center">
+              <div className="text-6xl font-bold text-project-accent">
+                {project.name.charAt(0)}
+              </div>
+            </div>
+          )}
 
           {/* Project Info */}
           <div className="flex flex-wrap items-center justify-between gap-4">
@@ -109,25 +120,45 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, isOpen
             </div>
           </div>
 
-          {/* Image Gallery */}
-          {project.images && project.images.length > 0 && (
+          {/* Media Gallery - Videos First, Then Images */}
+          {(project.videos && project.videos.length > 0) || (project.images && project.images.length > 0) ? (
             <div>
-              <h4 className="text-lg font-semibold mb-3">Gallery</h4>
+              <h4 className="text-lg font-semibold mb-3">Media Gallery</h4>
               <Carousel className="w-full overflow-x-hidden">
                 <CarouselContent>
-                  {project.images.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <div className="h-64 bg-gradient-to-br from-muted/20 to-muted/10 rounded-lg flex items-center justify-center">
-                        <span className="text-muted-foreground">Screenshot {index + 1}</span>
+                  {/* Videos */}
+                  {project.videos && project.videos.map((video, index) => (
+                    <CarouselItem key={`video-${index}`}>
+                      <div className="h-64 rounded-lg overflow-hidden">
+                        <iframe
+                          src={video.replace('watch?v=', 'embed/')}
+                          title={`${project.name} video ${index + 1}`}
+                          className="w-full h-full"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                  {/* Images */}
+                  {project.images && project.images.map((image, index) => (
+                    <CarouselItem key={`image-${index}`}>
+                      <div className="h-64 rounded-lg overflow-hidden">
+                        <img 
+                          src={image} 
+                          alt={`${project.name} screenshot ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className="left-3 top-1/2 -translate-y-1/2 z-20 bg-black/50 text-white hover:bg-black/60 border-none" />
+                <CarouselNext className="right-3 top-1/2 -translate-y-1/2 z-20 bg-black/50 text-white hover:bg-black/60 border-none" />
               </Carousel>
             </div>
-          )}
+          ) : null}
         </div>
       </DialogContent>
     </Dialog>

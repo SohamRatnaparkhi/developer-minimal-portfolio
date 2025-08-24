@@ -4,10 +4,8 @@
     "name": "MindKeeper AI",
     "description": "An AI-powered second brain to aggregate, organize, and query your scattered personal data using natural language.",
     "longDescription": "MindKeeper AI is your personal AI assistant, designed to be an AI-powered search engine for your life. It centralizes scattered information from various online and offline sources like YouTube, Google Drive, Notion, social media bookmarks, and local files into a single, unified space. You can then have natural language conversations with your data, whether it's a specific file, a group of related documents, or your entire knowledge base, and receive cited answers. Beyond personal use, MindKeeper offers an API and SDK for developers to integrate its powerful AI-driven inference into their own applications, enabling personalization with minimal effort. It's not just about storing information; it's about making it effortlessly accessible and useful.",
-    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/mindkeeper-ai/banner.jpg",
-    "images": [
-      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/mindkeeper-ai/1.jpg"
-    ],
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/mindkeeperai/banner-1.png",
+    "images": [   ],
     "techStack": [
       "FastAPI",
       "Python",
@@ -29,10 +27,14 @@
     "name": "Navigator AI",
     "description": "An open-source, self-learning browser automation agent with a self-improving memory layer.",
     "longDescription": "Navigator AI is a powerful open-source browser automation agent that learns from your interactions to make web tasks easier and more efficient. With custom DOM parsers that reduce token usage by 90%, it's designed for performance. The agent features a self-improving memory layer using RAGs, allowing it to learn and personalize automation patterns for your recurring tasks. Whether you're a developer looking to integrate automation into your web app with its component library or a user wanting to streamline your browsing with its extension, Navigator AI offers a flexible and intelligent solution.",
-    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/navigator-ai/banner.jpg",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/navigator-ai/banner.png",
     "images": [
       "https://github.com/user-attachments/assets/12459b59-2d5f-4e1f-ad39-fb9b30bda9b4",
       "https://github.com/user-attachments/assets/eef7787a-ab76-4256-8bc1-a4ad3053fab4"
+    ],
+    "videos": [
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/navigator-ai/v1.mp4",
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/navigator-ai/v2.mp4"
     ],
     "techStack": [
       "FastAPI",
@@ -55,9 +57,17 @@
     "name": "BannerCraft",
     "description": "Won 1st place at Google GenAI Hackathon. An AI platform for effortless, custom banner creation.",
     "longDescription": "BannerCraft is a revolutionary, award-winning platform that makes creating professional promotional banners a breeze. Simply upload a product image and a theme, and our advanced AI, powered by Gemini and Imagen3, generates a stunning, customized banner for you. But it doesn't stop there. BannerCraft includes a comprehensive editing suite with tools for text, shapes, and even a chatbot for generating custom images and stickers on the fly. We've also engineered it for precision, using computer vision to ensure 100% spelling and image accuracy.",
-    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/banner.jpg",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/banner.png",
     "images": [
-      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/1.jpg"
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/ss1.png",
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/ss2.png",
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/ss3.png",
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/ss4.png",
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/ss5.png",
+      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/ss6.png"
+    ],
+    "videos":[
+      "https://www.youtube.com/watch?v=dmdrlhGKbKM"
     ],
     "techStack": [
       "Gemini",
@@ -77,9 +87,9 @@
     "name": "Microservice Blogging Platform",
     "description": "A scalable blogging platform architected with 4 microservices in Go, ensuring high availability with HAProxy.",
     "longDescription": "This project is a robust and scalable blogging platform built from the ground up using a microservices architecture. It features four distinct services for authentication, blogs, user feeds, and user management, all written in Go. To ensure high availability and smooth performance, the platform uses HAProxy for load balancing and Redis for caching. The entire system is containerized with Docker, allowing for easy horizontal scaling to handle growing user demand. It's a complete backend solution for a modern, high-performance blogging application.",
-    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/microservice-blogging/banner.jpg",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/ms/ms1.png",
     "images": [
-      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/microservice-blogging/1.png"
+      "https://private-user-images.githubusercontent.com/92905626/243328729-8cda3809-23ab-498a-a9ac-4572638d9cfd.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTYwMjMwMjYsIm5iZiI6MTc1NjAyMjcyNiwicGF0aCI6Ii85MjkwNTYyNi8yNDMzMjg3MjktOGNkYTM4MDktMjNhYi00OThhLWE5YWMtNDU3MjYzOGQ5Y2ZkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODI0VDA4MDUyNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFiZTEwMDhkZjEzOGUyZDI2NjViZDAxNDQ4NmNiNGUyOWQzOGE5YzEwZGI1NDIwYjgyOTk5Y2U0MTU4MzAxMmQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.y7sEP5r88XEbmb-2QWh9G_VlQ1jyZES6HD8LDLO8VGc"
     ],
     "techStack": [
       "Go",
@@ -209,9 +219,8 @@
     "name": "VIT-Marketplace",
     "description": "A full-stack MERN application built to serve as an online marketplace for students of my college.",
     "longDescription": "VIT-Marketplace is a feature-rich online marketplace designed specifically for the students of my college. Built on the MERN stack (MongoDB, Express, React, Node.js), it provides a platform for students to easily buy and sell products within the campus community. The application uses Redux for state management and TailwindCSS for a modern, responsive user interface. I was primarily responsible for developing the robust backend that powers the platform.",
-    "image": "/projects/market/market1.jpg",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/market/market1.jpg",
     "images": [
-      "/projects/market/market1.jpg"
     ],
     "techStack": [
       "MongoDB",
@@ -232,9 +241,8 @@
     "name": "Transliterate",
     "description": "An all-in-one web app for transliterating text, audio, and video between 106 languages using Google APIs.",
     "longDescription": "Transliterate is a powerful web application that breaks down language barriers. It's an all-in-one tool capable of transliterating not just text, but also audio and video content between 106 different languages. The application is built with Flask and leverages a suite of Google APIs to perform its complex translation and transliteration tasks, offering a seamless and intuitive user experience.",
-    "image": "/projects/transliterate/tr1.png",
+    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/transliterate/tr1.png",
     "images": [
-      "/projects/transliterate/tr1.png"
     ],
     "techStack": [
       "Flask",
