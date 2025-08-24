@@ -86,6 +86,7 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'slide': 'slide 8s linear infinite',
 				'slide-smooth': 'slide-smooth 5s linear infinite',
+				'slide-smooth-slow': 'slide-smooth 15s linear infinite',
 				'slide-smooth-fast': 'slide-smooth 10s linear infinite',
 				'slide-mobile': 'slide 15s linear infinite',
 				'slide-mobile-fast': 'slide-mobile-fast 5s linear infinite',
@@ -103,6 +104,10 @@ export default {
 					'100%': { transform: 'translateX(-100%)' }
 				},
 				'slide-smooth': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
+				},
+				'slide-smooth-slow': {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(-50%)' }
 				},

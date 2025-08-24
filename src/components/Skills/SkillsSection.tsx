@@ -1,7 +1,7 @@
 import React from 'react';
 import skillsData from '../../../config/skills.json';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Code, Database, Wrench, Layers3 } from 'lucide-react';
+import { LaptopMinimalCheck, Code, Database, Wrench, Layers3 } from 'lucide-react';
 
 const SkillsSection: React.FC = () => {
   // Group skills for mobile tabs
@@ -26,11 +26,11 @@ const SkillsSection: React.FC = () => {
         </div>
 
         {/* Mobile: Categorized tabs with continuous marquee */}
-        <Tabs defaultValue="languages" className="w-full md:hidden">
-          <TabsList className="grid w-full grid-cols-4 mb-8">
-            {/* <TabsTrigger value="all" className="flex flex-col items-center gap-1 p-1">
-              <Code className="w-5 h-5" />
-            </TabsTrigger> */}
+        <Tabs defaultValue="all" className="w-full md:hidden">
+          <TabsList className="grid w-full grid-cols-5 mb-8">
+            <TabsTrigger value="all" className="flex flex-col items-center gap-1 p-1">
+              <LaptopMinimalCheck className="w-5 h-5" />
+            </TabsTrigger>
             <TabsTrigger value="languages" className="flex flex-col items-center gap-1 p-1">
               <Code className="w-5 h-5" />
             </TabsTrigger>
@@ -46,7 +46,7 @@ const SkillsSection: React.FC = () => {
           </TabsList>
 
           {[
-            // { key: 'all', data: allSkills },
+            { key: 'all', data: allSkills },
             { key: 'languages', data: languages },
             { key: 'frameworks', data: frameworks },
             { key: 'databases', data: databases },
@@ -54,7 +54,7 @@ const SkillsSection: React.FC = () => {
           ].map(({ key, data }) => (
             <TabsContent key={key} value={key} className="mt-0">
               <div className="relative overflow-hidden">
-                <div className="animate-slide-smooth flex flex-nowrap gap-4 w-max py-2">
+                <div className={`${key === 'all' ? 'animate-slide-smooth-slow' : 'animate-slide-smooth'} flex flex-nowrap gap-4 w-max py-2`}>
                   {[...data, ...data].map((skill, i) => (
                     <div
                       key={`${skill.name}-${i}`}

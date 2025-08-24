@@ -58,10 +58,7 @@ const BlogSection: React.FC = () => {
                     <Calendar className="h-4 w-4" />
                     <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" />
-                    <span>{post.readTime}</span>
-                  </div>
+                  
                 </div>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3 line-clamp-2">
@@ -80,12 +77,17 @@ const BlogSection: React.FC = () => {
                     </Badge>
                   ))}
                 </div>
-
+                
+                
                 <div className="flex items-center gap-2 text-primary text-sm font-medium">
                   Read More
                   <ArrowRight className="h-3 w-3" />
                 </div>
               </div>
+                <div className="flex items-center gap-1 text-xs p-2 justify-end">
+                  <Clock className="h-3 w-3" />
+                  <span>{post.readTime}</span>
+                </div>
             </article>
           ))}
         </div>

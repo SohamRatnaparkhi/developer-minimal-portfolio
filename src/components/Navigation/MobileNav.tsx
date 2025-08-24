@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Home, User, Code, FolderOpen, Github, Linkedin, Twitter, Sun, Moon } from 'lucide-react';
+import { Home, User, Code, FolderOpen, Github, Linkedin, Twitter, Sun, Moon, NotebookPen, Medal } from 'lucide-react';
 import profileData from '../../../config/profile.json';
 import { useTheme } from '../../hooks/useTheme';
 
@@ -22,8 +22,8 @@ const MobileNav: React.FC = () => {
     { id: 'experience', icon: User },
     { id: 'skills', icon: Code },
     { id: 'projects', icon: FolderOpen },
-    { id: 'extra-curriculars', icon: User },
-    { id: 'blog', icon: Code },
+    { id: 'extra-curriculars', icon: Medal },
+    { id: 'blog', icon: NotebookPen },
   ];
 
   const navItemIds = navItems.map(item => item.id);
