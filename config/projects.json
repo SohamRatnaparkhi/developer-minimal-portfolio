@@ -19,10 +19,9 @@
       "Next JS",
       "PostgreSQL"
     ],
-    "githubUrl": "https://github.com/SohamRatnaparkhi/cortex-cache-ai-backend",
     "liveUrl": "https://home.mindkeeperai.com/",
     "featured": true,
-    "isOpenSource": true,
+    "isOpenSource": false,
     "category": "AI/ML"
   },
   {

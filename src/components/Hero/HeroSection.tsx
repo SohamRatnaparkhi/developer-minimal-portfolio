@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Twitter, ExternalLink } from 'lucide-react';
 import profileData from '../../../config/profile.json';
+import Typewriter from '@/components/ui/typewriter';
 
 // Types for bio data structure
 interface HighlightWord {
@@ -232,7 +233,15 @@ const HeroSection: React.FC = () => {
               {profileData.name}
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-6 font-medium">
-              {profileData.title}
+              <Typewriter
+                text={profileData.title}
+                typingSpeedMs={50}
+                deletingSpeedMs={30}
+                pauseBeforeDeleteMs={1200}
+                pauseBetweenWordsMs={500}
+                loop={false}
+                showCursor={true}
+              />
             </p>
           </div>
 

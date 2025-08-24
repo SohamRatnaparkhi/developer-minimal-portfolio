@@ -31,7 +31,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, isOpen
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-[95vw] max-h-[90vh] overflow-y-auto overflow-x-hidden">
+      <DialogContent className="max-w-[95vw] md:max-w-[75vw] max-h-[90vh] overflow-y-auto overflow-x-hidden">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">{project.name}</DialogTitle>
         </DialogHeader>
