@@ -7,7 +7,8 @@ import Index from "./pages/Index";
 import ProjectsPage from "./pages/ProjectsPage";
 import BlogPage from "./pages/BlogPage";
 import NotFound from "./pages/NotFound";
-import ScrollToTop from "@/components/Navigation/ScrollToTop";
+import ScrollToTop from "@/components/Navigation/ScrollToTop"
+import { Analytics } from "@vercel/analytics/react";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <Analytics mode="production" /> 
       <BrowserRouter>
         <ScrollToTop />
         <Routes>

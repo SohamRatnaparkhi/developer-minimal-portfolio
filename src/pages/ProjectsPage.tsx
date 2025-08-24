@@ -34,6 +34,7 @@ const ProjectsPage: React.FC = () => {
     });
   }, [searchTerm, selectedCategory]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleLearnMore = (project: any) => {
     setSelectedProject(project);
     setIsModalOpen(true);
