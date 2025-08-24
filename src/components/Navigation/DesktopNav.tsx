@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Moon, Sun, Home, User, Code, FolderOpen, PenTool } from 'lucide-react';
+import { Moon, Sun, Home, User, Code, FolderOpen, PenTool, FileText } from 'lucide-react';
 import profileData from '../../../config/profile.json';
 
 interface DesktopNavProps {
@@ -72,11 +72,22 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isDark, toggleTheme }) => {
           </div>
 
           {/* Theme Toggle */}
+          <div className='ml-4 flex items-center gap-2'> 
+          {/* Resume Link */}
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => window.open('https://drive.google.com/file/d/1_Hd836nh2GvtntRbNssChoF1YCCC5k_r/view?usp=sharing', '_blank')}
+            className="ml-4 flex items-center gap-2"
+          >
+            <FileText className="h-4 w-4" />
+            Resume
+          </Button>
           <Button
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="ml-4"
+            className=""
           >
             {isDark ? (
               <Sun className="h-5 w-5" />
@@ -84,6 +95,8 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isDark, toggleTheme }) => {
               <Moon className="h-5 w-5" />
             )}
           </Button>
+
+          </div>
         </div>
       </div>
     </nav>

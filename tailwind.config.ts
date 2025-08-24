@@ -86,7 +86,7 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'slide': 'slide 8s linear infinite',
 				'slide-smooth': 'slide-smooth 5s linear infinite',
-				'slide-smooth-slow': 'slide-smooth 15s linear infinite',
+				'slide-smooth-slow': 'slide-smooth 18s linear infinite',
 				'slide-smooth-fast': 'slide-smooth 10s linear infinite',
 				'slide-mobile': 'slide 15s linear infinite',
 				'slide-mobile-fast': 'slide-mobile-fast 5s linear infinite',
