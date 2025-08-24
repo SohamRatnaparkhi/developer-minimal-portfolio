@@ -135,20 +135,20 @@ const ExtraCurricularsSection: React.FC = () => {
                   className="research-card bg-card rounded-lg p-6 border border-border/50 hover:border-primary/20 transition-all hover:shadow-lg cursor-pointer"
                   onClick={() => handleResearchClick(research)}
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <Badge variant="outline" className="text-xs">
-                      {research.category}
-                    </Badge>
-                  </div>
                   <h3 className="text-xl font-semibold mb-2 text-foreground">
                     {research.title}
                   </h3>
                   <p className="text-muted-foreground mb-4 text-sm leading-relaxed line-clamp-3">
                     {research.publication}
                   </p>
-                  <div className="flex items-center text-xs text-muted-foreground">
-                    <Calendar className="h-3 w-3 mr-1" />
-                    {formatDate(research.date)}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-xs text-muted-foreground">
+                      <Calendar className="h-3 w-3 mr-1" />
+                      {formatDate(research.date)}
+                    </div>
+                    <Badge variant="outline" className="text-xs">
+                      {research.category}
+                    </Badge>
                   </div>
                 </div>
               ))}
@@ -167,15 +167,20 @@ const ExtraCurricularsSection: React.FC = () => {
                     className="research-card-mobile bg-card rounded-lg p-4 border border-border/50 hover:border-primary/20 transition-all flex-shrink-0 w-64 cursor-pointer"
                     onClick={() => handleResearchClick(research)}
                   >
-                    <Badge variant="outline" className="text-xs mb-2">
-                      {research.category}
-                    </Badge>
-                    <h3 className="text-sm font-semibold mb-1 text-foreground line-clamp-2">
+                    <h3 className="text-sm font-semibold mb-2 text-foreground line-clamp-2">
                       {research.title}
                     </h3>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <Calendar className="h-3 w-3 mr-1" />
-                      {formatDate(research.date)}
+                    <p className="text-muted-foreground mb-3 text-xs leading-relaxed line-clamp-2">
+                      {research.publication}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-xs text-muted-foreground">
+                        <Calendar className="h-3 w-3 mr-1" />
+                        {formatDate(research.date)}
+                      </div>
+                      <Badge variant="outline" className="text-xs">
+                        {research.category}
+                      </Badge>
                     </div>
                   </div>
                 ))}
@@ -215,7 +220,7 @@ const ExtraCurricularsSection: React.FC = () => {
           {/* Achievements Tab */}
           <TabsContent value="achievements" className="mt-0">
             {/* Desktop Achievements Grid */}
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-2 gap-6">
               {featuredAchievements.map((achievement) => (
                 <div
                   key={achievement.id}

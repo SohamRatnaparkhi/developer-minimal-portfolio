@@ -35,49 +35,48 @@ const ResearchModal: React.FC<ResearchModalProps> = ({ research, isOpen, onClose
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+      <DialogContent className="max-w-[95vw] md:max-w-2xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <div className="flex items-start justify-between mb-4">
-            <DialogTitle className="text-2xl font-bold pr-4">
-              {research.title}
-            </DialogTitle>
-            <Badge variant="secondary" className="shrink-0">
-              {research.category}
-            </Badge>
-          </div>
+          <DialogTitle className="text-xl md:text-2xl font-bold mb-4">
+            {research.title}
+          </DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-6">
+        <div className="space-y-4 md:space-y-6">
           {/* Publication Info */}
-          <div className="bg-muted/30 rounded-lg p-4 space-y-3">
-            <div className="flex items-center text-sm text-muted-foreground">
-              <Calendar className="h-4 w-4 mr-2" />
+          <div className="bg-muted/30 rounded-lg p-3 md:p-4 space-y-2 md:space-y-3">
+            <div className="flex items-center text-xs md:text-sm text-muted-foreground">
+              <Calendar className="h-3 w-3 md:h-4 md:w-4 mr-2" />
               {formatDate(research.date)}
             </div>
-            <div className="flex items-center text-sm text-muted-foreground">
-              <Users className="h-4 w-4 mr-2" />
+            <div className="flex items-center text-xs md:text-sm text-muted-foreground">
+              <Users className="h-3 w-3 md:h-4 md:w-4 mr-2" />
               {research.authors.join(', ')}
             </div>
-            <div className="text-sm font-medium">
+            <div className="text-xs md:text-sm font-medium">
               Published in: {research.publication}
             </div>
           </div>
 
           {/* Publication / Link */}
           <div>
-            <h3 className="text-lg font-semibold mb-3">Publication</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">Publication</h3>
+            <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
               {research.publication}
             </p>
           </div>
 
-          {/* Action Button */}
-          <div className="flex justify-end pt-4 border-t">
+          {/* Action Button and Category */}
+          <div className="flex items-center justify-between pt-3 md:pt-4 border-t">
+            <Badge variant="secondary" className="text-xs md:text-sm">
+              {research.category}
+            </Badge>
             <Button 
               onClick={() => window.open(research.link, '_blank')}
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 text-sm md:text-base"
+              size="sm"
             >
-              <ExternalLink className="h-4 w-4" />
+              <ExternalLink className="h-3 w-3 md:h-4 md:w-4" />
               Read Full Paper
             </Button>
           </div>
