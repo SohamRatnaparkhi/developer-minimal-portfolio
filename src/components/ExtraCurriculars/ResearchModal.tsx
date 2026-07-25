@@ -14,6 +14,7 @@ interface Research {
   link: string;
   category: string;
   featured: boolean;
+  citations?: number;
 }
 
 interface ResearchModalProps {
@@ -68,9 +69,16 @@ const ResearchModal: React.FC<ResearchModalProps> = ({ research, isOpen, onClose
 
           {/* Action Button and Category */}
           <div className="flex items-center justify-between pt-3 md:pt-4 border-t">
-            <Badge variant="secondary" className="text-xs md:text-sm">
-              {research.category}
-            </Badge>
+            <div className="flex items-center gap-2">
+              <Badge variant="secondary" className="text-xs md:text-sm">
+                {research.category}
+              </Badge>
+              {research.citations != null && research.citations > 0 && (
+                <span className="text-xs text-muted-foreground font-medium">
+                  {research.citations} citations
+                </span>
+              )}
+            </div>
             <Button 
               onClick={() => window.open(research.link, '_blank')}
               className="flex items-center gap-2 text-sm md:text-base"

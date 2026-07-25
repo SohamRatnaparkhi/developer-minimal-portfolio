@@ -195,8 +195,8 @@ const HeroSection: React.FC = () => {
     { icon: Twitter, href: profileData.socialLinks.twitter, label: 'Twitter' },
   ];
 
-  const scrollToProjects = () => {
-    const element = document.getElementById('projects');
+  const scrollToExperience = () => {
+    const element = document.getElementById('experience');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -214,7 +214,6 @@ const HeroSection: React.FC = () => {
                   alt={`${profileData.name} profile picture`}
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    // Fallback to initials if image fails to load
                     const target = e.target as HTMLImageElement;
                     target.style.display = 'none';
                     const fallback = target.nextElementSibling as HTMLElement;
@@ -299,11 +298,11 @@ const HeroSection: React.FC = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={scrollToProjects}
+              onClick={scrollToExperience}
               size="lg"
               className="text-lg px-8 py-3 bg-primary hover:bg-primary/90 transition-all hover:scale-105 shadow-medium"
             >
-              View My Work
+              Check My Work
             </Button>
             <Button
               variant="outline"

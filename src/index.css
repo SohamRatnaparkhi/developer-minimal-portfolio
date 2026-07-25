@@ -260,6 +260,67 @@ All colors MUST be HSL.
   .overflow-x-auto {
     max-width: 100vw;
   }
+
+  /* Blog prose list styling */
+  .prose ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .prose ol {
+    list-style-type: decimal;
+    padding-left: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .prose ul ul,
+  .prose ol ul {
+    list-style-type: circle;
+  }
+
+  .prose li {
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+  }
+
+  .prose ol > li::marker {
+    color: hsl(var(--primary));
+    font-weight: 600;
+  }
+
+  .prose ul > li::marker {
+    color: hsl(var(--primary) / 0.6);
+  }
+
+  /* Blog code block styling */
+  .prose pre {
+    overflow-x: auto;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    background-color: hsl(var(--muted));
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .prose pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    border-radius: 0;
+  }
+
+  .prose pre code::before,
+  .prose pre code::after {
+    content: none;
+  }
 }
 
 @layer utilities {
@@ -285,6 +346,11 @@ All colors MUST be HSL.
   100% { transform: translateX(-100%); }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -294,4 +360,32 @@ All colors MUST be HSL.
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.4s ease-out forwards;
 }

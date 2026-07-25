@@ -1,0 +1,193 @@
+% =============================================================================
+% Single-column, one-page resume (FAANG / ATS-friendly)
+% Design language from the AltaCV two-column resume:
+%   - bold section titles + solid black rule
+%   - blue company / project links
+%   - light dividers between roles
+%   - classic left/right alignment for title + dates
+% Compile: pdflatex / xelatex / tectonic resume-faang.tex
+% =============================================================================
+\documentclass[9pt,letterpaper]{extarticle}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{setspace}
+
+\definecolor{Ink}{HTML}{1A1A1A}
+\definecolor{BodyGrey}{HTML}{2E2E2E}
+\definecolor{Muted}{HTML}{555555}
+\definecolor{RuleGrey}{HTML}{C4C4C4}
+\definecolor{AccentBlue}{HTML}{0563C1}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=AccentBlue,
+  linkcolor=AccentBlue,
+  pdftitle={Soham Ratnaparkhi - Resume},
+  pdfauthor={Soham Ratnaparkhi},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{0.97}
+\setlist[itemize]{
+  leftmargin=1.05em,
+  itemsep=1.0pt,
+  topsep=1.2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+\color{BodyGrey}
+
+\newcommand{\resumesection}[1]{%
+  \par\vspace{0.34em}%
+  {\color{Ink}\normalsize\bfseries #1}\par
+  \vspace{0.1em}%
+  {\color{Ink}\hrule height 0.95pt}\par
+  \vspace{0.2em}%
+  \nopagebreak
+}
+
+% #1 title  #2 company  #3 dates  #4 location
+\newcommand{\role}[4]{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    {\color{Ink}\textbf{#1}} & {\footnotesize\color{Muted}#3} \\[-0.08em]
+    {\color{AccentBlue}#2} & {\footnotesize\color{Muted}\textit{#4}} \\
+  \end{tabularx}%
+  \vspace{0.02em}%
+}
+
+\newcommand{\roledivider}{%
+  \par\vspace{0.16em}%
+  {\color{RuleGrey}\hrule height 0.3pt}\par
+  \vspace{0.24em}%
+}
+
+\newcommand{\project}[2]{%
+  \noindent{\color{AccentBlue}\textbf{#1}}{\footnotesize\color{Muted}~~--~~#2}\par
+  \vspace{0.02em}%
+}
+
+\begin{document}
+
+% ---- HEADER ----
+\begin{center}
+  {\color{Ink}\LARGE\bfseries Soham Ratnaparkhi}\\[0.16em]
+  {\small\color{BodyGrey}Product Lead @ HydraDB $\cdot$ Founding Backend \& Infra}\\[0.2em]
+  {\footnotesize\color{Muted}
+    \href{mailto:soham.ratnaparkhi@gmail.com}{soham.ratnaparkhi@gmail.com}
+    $\;|\;$ +91-9767134529
+    $\;|\;$ Pune, India (Remote)
+    $\;|\;$ \href{https://sohamratnaparkhi.com}{sohamratnaparkhi.com}
+    $\;|\;$ \href{https://github.com/SohamRatnaparkhi}{GitHub}
+    $\;|\;$ \href{https://www.linkedin.com/in/soham-ratnaparkhi-3a3775ab/}{LinkedIn}
+  }
+\end{center}
+\vspace{0.06em}
+{\color{Ink}\hrule height 0.95pt}
+
+% ---- SUMMARY ----
+\resumesection{SUMMARY}
+{\small
+Founding engineer turned Product Lead at \textbf{HydraDB} (\textbf{\$6.5M seed}). Built backend and
+infra from day zero: hybrid vector + graph retrieval under \textbf{200ms}, \textbf{100k+ files/day} indexing,
+self-hosted Kubernetes production, and a graph DB from scratch targeting \textbf{10$\times$} multi-hop vs Neo4j.
+IEEE-published; LFX / CNCF mentee.
+}
+
+% ---- EXPERIENCE ----
+\resumesection{EXPERIENCE}
+
+\role{Product Lead}{\href{https://hydradb.com}{HydraDB} {\footnotesize(\$6.5M seed)}}{May 2026 -- Present}{Remote}
+\begin{itemize}
+  \item \textbf{Promoted} after owning backend and infra from day zero on the team that raised a \textbf{\$6.5M seed}.
+  \item Lead product for HydraDB's context graph: roadmap, connectors, hybrid search, and DX for agents in production.
+  \item Scaled connectors across \textbf{30+ SaaS tools}; hybrid search under \textbf{200ms}; SDKs on \textbf{npm + PyPI}.
+  \item Building a \textbf{graph database from scratch} on object storage (OpenCypher + Bolt); $\sim$\textbf{10$\times$} multi-hop vs Neo4j.
+\end{itemize}
+\roledivider
+
+\role{Founding Backend \& Infrastructure Engineer}{\href{https://hydradb.com}{HydraDB}}{Jun 2025 -- Present}{Remote}
+\begin{itemize}
+  \item Sole owner of backend and infra from day zero; indexing at \textbf{100k+ files/day} ($\sim$1M+ tokens/min).
+  \item Self-hosted production on Kubernetes/EKS: Milvus, FalkorDB, ClickHouse, Kafka, Temporal, Prometheus, Grafana.
+  \item Redesigned ingestion after production pain: Temporal, exactly-once inbox, per-org Kafka fairness, claim-check, replay-safe sinks.
+  \item Migrated Kafka off silent-loss path (MSK Serverless $\rightarrow$ Strimzi KRaft); OpenAPI $\rightarrow$ SDKs; led usecortex.ai $\rightarrow$ hydradb.com.
+\end{itemize}
+\roledivider
+
+\role{Founding Engineer}{\href{https://usefindr.com}{Findr AI} $\rightarrow$ Cortex / HydraDB}{Apr 2025 -- Nov 2025}{Remote}
+\begin{itemize}
+  \item Built \textbf{Pro-Search} (production RAG + multi-step retrieval); cut p50/p90 latency \textbf{50\%+}; accuracy $\sim$\textbf{20\%}.
+\end{itemize}
+\roledivider
+
+\role{Research Intern}{\href{https://www.uwindsor.ca/}{University of Windsor (Mitacs)}}{Aug 2024 -- Nov 2024}{Windsor, Canada}
+\begin{itemize}
+  \item Co-authored \textbf{IEEE} paper on privacy-preserving LLM fine-tuning (FL + blockchain + MPC); 52 models, 4 datasets; QLoRA.
+\end{itemize}
+\roledivider
+
+\role{Technology Intern}{\href{https://home.barclays/}{Barclays}}{Jun 2024 -- Jul 2024}{Pune, India}
+\begin{itemize}
+  \item Cut K8s fleet monitoring latency from \textbf{8 min to $<$1 min} (8$\times$) across 1,000+ pods; dynamic query engine (27 filters).
+\end{itemize}
+\roledivider
+
+\role{LFX Mentee}{\href{https://litmuschaos.io/}{LitmusChaos (CNCF)}}{Jun 2023 -- Aug 2023}{Remote}
+\begin{itemize}
+  \item Merged \textbf{7 PRs} (tests, interfaces, dedup); \textbf{90\%+} coverage; GraphQL-to-REST migration on Go + Kubernetes.
+\end{itemize}
+
+% ---- PROJECTS ----
+\resumesection{PROJECTS}
+
+\project{\href{https://sohamratnaparkhi.com}{MindKeeper AI}}{personal second-brain RAG; 500k+ organic views}
+\begin{itemize}
+  \item Production RAG over personal/work data; multi-step retrieval; FastAPI, Go, Pinecone, Redis, AWS Lambda, Next.js.
+\end{itemize}
+\vspace{0.1em}
+
+\project{\href{https://github.com/SohamRatnaparkhi/navigator-ai}{Navigator AI}}{open-source browser automation agent}
+\begin{itemize}
+  \item Self-learning agent with custom DOM parsers ($\sim$90\% fewer tokens) and RAG memory; FastAPI, React, TypeScript, Weaviate.
+\end{itemize}
+
+% ---- SKILLS ----
+\resumesection{TECHNICAL SKILLS}
+{\small
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\color{Ink}}l@{\hspace{0.55em}}X@{}}
+Languages:     & Python, Go, Rust, TypeScript, Java \\
+Backend / AI:  & FastAPI, Temporal, Kafka, RAG, OpenAPI, OpenCypher \\
+Data stores:   & Milvus, FalkorDB, ClickHouse, PostgreSQL, Redis, MongoDB \\
+Infra:         & Kubernetes, EKS, Helm, ArgoCD, Docker, AWS, Prometheus, Grafana, OpenTelemetry \\
+\end{tabularx}
+}
+
+% ---- EDUCATION ----
+\resumesection{EDUCATION}
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  {\color{Ink}\textbf{B.Tech.\ Computer Engineering}}, Vishwakarma Institute of Technology, Pune
+    & {\footnotesize\color{Muted}2021 -- 2025} \\
+\end{tabularx}\\[-0.08em]
+{\small CGPA 9.29 / 10 (3.72 / 4)}
+
+% ---- ACHIEVEMENTS ----
+\resumesection{ACHIEVEMENTS}
+\begin{itemize}
+  \item Founding eng $\rightarrow$ Product Lead @ HydraDB (\textbf{\$6.5M seed}); YC India Startup School; LFX @ LitmusChaos (CNCF)
+  \item \textbf{1st}, Google GenAI Hackathon 2024; ETHIndia 2022 \& 2023, FVM Spacewarp; Mitacs Globalink ($<$15\%); IEEE papers
+  \item President, MLSC VIT --- Hackspiration 2024 (\$10k+ prize pool, 1,200+ participants)
+\end{itemize}
+
+\end{document}

@@ -1,133 +1,126 @@
 import React from 'react';
 import skillsData from '../../../config/skills.json';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { LaptopMinimalCheck, Code, Database, Wrench, Layers3 } from 'lucide-react';
+import { LaptopMinimalCheck, Code, Database, Wrench, Layers3, Server } from 'lucide-react';
+
+const SPEED_PX_PER_SEC = 30;
+const ITEM_WIDTH_PX = 172;
+
+function marqueeDuration(count: number): string {
+  const totalWidth = count * ITEM_WIDTH_PX;
+  return `${totalWidth / SPEED_PX_PER_SEC}s`;
+}
 
 const SkillsSection: React.FC = () => {
-  // Group skills for mobile tabs
   const languages = skillsData.filter((s) => s.category === 'Language');
   const frameworks = skillsData.filter((s) => s.category === 'Framework');
   const databases = skillsData.filter((s) => s.category === 'Database');
+  const infra = skillsData.filter((s) => s.category === 'Infrastructure');
   const tools = skillsData.filter((s) => s.category === 'Tools');
-
   const allSkills = skillsData;
+
+  const tabGroups = [
+    { key: 'all', label: 'All', icon: LaptopMinimalCheck, data: allSkills },
+    { key: 'languages', label: 'Languages', icon: Code, data: languages },
+    { key: 'frameworks', label: 'Frameworks', icon: Layers3, data: frameworks },
+    { key: 'databases', label: 'Databases', icon: Database, data: databases },
+    { key: 'infra', label: 'Infra', icon: Server, data: infra },
+    { key: 'tools', label: 'Tools', icon: Wrench, data: tools },
+  ];
+
+  const SkillCard = ({ skill, compact = false }: { skill: typeof skillsData[0]; compact?: boolean }) => (
+    <div className={`skill-item bg-card rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-200 hover:shadow-md group ${compact ? 'p-2 flex-shrink-0 w-40' : 'p-4'}`}>
+      <div className="flex flex-col items-center space-y-2">
+        <div className={`${compact ? 'w-12 h-12' : 'w-14 h-14'} bg-white/90 dark:bg-white/10 rounded-lg flex items-center justify-center p-1.5 shadow-sm border border-gray-100 dark:border-white/10 group-hover:scale-105 transition-transform duration-200`}>
+          <img
+            src={skill.logo}
+            alt={`${skill.name} logo`}
+            className="w-full h-full object-contain"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              const fallback = target.nextElementSibling as HTMLElement;
+              if (fallback) fallback.style.display = 'flex';
+            }}
+          />
+          <span className="text-lg font-bold text-primary hidden items-center justify-center w-full h-full">
+            {skill.name.charAt(0)}
+          </span>
+        </div>
+        <span className={`${compact ? 'text-xs' : 'text-sm'} font-medium text-center text-foreground`}>
+          {skill.name}
+        </span>
+      </div>
+    </div>
+  );
+
+  const Marquee = ({ data }: { data: typeof skillsData }) => {
+    const duration = marqueeDuration(data.length);
+    return (
+      <div className="relative overflow-hidden">
+        <div
+          className="flex flex-nowrap gap-3 w-max py-2 animate-marquee"
+          style={{ animationDuration: duration }}
+        >
+          {[...data, ...data].map((skill, i) => (
+            <SkillCard key={`${skill.name}-${i}`} skill={skill} compact />
+          ))}
+        </div>
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-background to-transparent" />
+      </div>
+    );
+  };
 
   return (
     <section id="skills" className="py-20">
-      <div className="container mx-auto px-6 w-full md:w-2/3 lg:w-1/2 section-surface p-6 md:p-8">
-        {/* Section Header */}
+      <div className="container mx-auto px-6 w-full md:w-2/3 lg:w-3/5 section-surface p-6 md:p-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
             Skills
           </h2>
           <p className="text-xl text-muted-foreground">
-            Technologies and tools I am working with
+            Technologies and tools I work with
           </p>
         </div>
 
-        {/* Mobile: Categorized tabs with continuous marquee */}
         <Tabs defaultValue="all" className="w-full md:hidden">
-          <TabsList className="grid w-full grid-cols-5 mb-8">
-            <TabsTrigger value="all" className="flex flex-col items-center gap-1 p-1">
-              <LaptopMinimalCheck className="w-5 h-5" />
-            </TabsTrigger>
-            <TabsTrigger value="languages" className="flex flex-col items-center gap-1 p-1">
-              <Code className="w-5 h-5" />
-            </TabsTrigger>
-            <TabsTrigger value="frameworks" className="flex flex-col items-center gap-1 p-1">
-              <Layers3 className="w-5 h-5" />
-            </TabsTrigger>
-            <TabsTrigger value="databases" className="flex flex-col items-center gap-1 p-1">
-              <Database className="w-5 h-5" />
-            </TabsTrigger>
-            <TabsTrigger value="tools" className="flex flex-col items-center gap-1 p-1">
-              <Wrench className="w-5 h-5" />
-            </TabsTrigger>
+          <TabsList className="grid w-full grid-cols-6 mb-8">
+            {tabGroups.map(({ key, icon: Icon }) => (
+              <TabsTrigger key={key} value={key} className="flex flex-col items-center gap-1 p-1">
+                <Icon className="w-4 h-4" />
+              </TabsTrigger>
+            ))}
           </TabsList>
 
-          {[
-            { key: 'all', data: allSkills },
-            { key: 'languages', data: languages },
-            { key: 'frameworks', data: frameworks },
-            { key: 'databases', data: databases },
-            { key: 'tools', data: tools },
-          ].map(({ key, data }) => (
+          {tabGroups.map(({ key, data }) => (
             <TabsContent key={key} value={key} className="mt-0">
-              <div className="relative overflow-hidden">
-                <div className={`${key === 'all' ? 'animate-slide-smooth-slow' : 'animate-slide-smooth'} flex flex-nowrap gap-4 w-max py-2`}>
-                  {[...data, ...data].map((skill, i) => (
-                    <div
-                      key={`${skill.name}-${i}`}
-                      className="skill-item bg-card rounded-lg p-2 border border-border/50 hover:border-primary/20 transition-all flex-shrink-0 w-48"
-                    >
-                      <div className="flex flex-col items-center space-y-2">
-                        <div className="w-16 h-16 bg-white/90 rounded-lg flex items-center justify-center p-1 shadow-sm border border-gray-100">
-                          <img 
-                            src={skill.logo} 
-                            alt={`${skill.name} logo`}
-                            className="w-14 h-14 object-contain"
-                            onError={(e) => {
-                              // Fallback to first character if image fails to load
-                              const target = e.target as HTMLImageElement;
-                              target.style.display = 'none';
-                              const fallback = target.nextElementSibling as HTMLElement;
-                              if (fallback) fallback.style.display = 'flex';
-                            }}
-                          />
-                          <span className="text-lg font-bold text-white hidden">
-                            {skill.name.charAt(0)}
-                          </span>
-                        </div>
-                        <h3 className="text-sm font-medium text-center text-foreground line-clamp-2">
-                          {skill.name}
-                        </h3>
-                        <span className="text-xs px-2 py-1 bg-muted text-muted-foreground rounded-full">
-                          {skill.category}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Gradient overlays for edges */}
-                <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-background to-transparent" />
-                <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-background to-transparent" />
-              </div>
+              <Marquee data={data} />
             </TabsContent>
           ))}
         </Tabs>
 
-        {/* Skills Grid for Static View - Desktop only */}
-        <div className="hidden md:grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6">
-          {skillsData.map((skill) => (
-            <div
-              key={skill.name}
-              className="skill-item bg-card p-4 rounded-lg shadow-soft border border-border/50 hover:border-primary/20"
-            >
-              <div className="flex flex-col items-center space-y-2">
-                <div className="w-16 h-16 bg-white/90 rounded-lg flex items-center justify-center p-1 shadow-sm border border-gray-100">
-                  <img 
-                    src={skill.logo} 
-                    alt={`${skill.name} logo`}
-                    className="w-14 h-14 object-contain"
-                    onError={(e) => {
-                      // Fallback to first character if image fails to load
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const fallback = target.nextElementSibling as HTMLElement;
-                      if (fallback) fallback.style.display = 'flex';
-                    }}
-                  />
-                  <span className="text-lg font-bold text-white hidden">
-                    {skill.name.charAt(0)}
-                  </span>
+        <div className="hidden md:block">
+          <Tabs defaultValue="all" className="w-full">
+            <TabsList className="flex w-full mb-8 gap-1">
+              {tabGroups.map(({ key, label, icon: Icon }) => (
+                <TabsTrigger key={key} value={key} className="flex items-center gap-2 px-4 py-2">
+                  <Icon className="w-4 h-4" />
+                  <span>{label}</span>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
+            {tabGroups.map(({ key, data }) => (
+              <TabsContent key={key} value={key} className="mt-0">
+                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                  {data.map((skill) => (
+                    <SkillCard key={skill.name} skill={skill} />
+                  ))}
                 </div>
-                <span className="text-sm font-medium text-center">
-                  {skill.name}
-                </span>
-              </div>
-            </div>
-          ))}
+              </TabsContent>
+            ))}
+          </Tabs>
         </div>
       </div>
     </section>

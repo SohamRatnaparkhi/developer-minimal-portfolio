@@ -2,10 +2,10 @@
   {
     "id": 1,
     "name": "MindKeeper AI",
-    "description": "An AI-powered second brain to aggregate, organize, and query your scattered personal data using natural language.",
-    "longDescription": "MindKeeper AI is your personal AI assistant, designed to be an AI-powered search engine for your life. It centralizes scattered information from various online and offline sources like YouTube, Google Drive, Notion, social media bookmarks, and local files into a single, unified space. You can then have natural language conversations with your data, whether it's a specific file, a group of related documents, or your entire knowledge base, and receive cited answers. Beyond personal use, MindKeeper offers an API and SDK for developers to integrate its powerful AI-driven inference into their own applications, enabling personalization with minimal effort. It's not just about storing information; it's about making it effortlessly accessible and useful.",
+    "description": "An AI-powered second brain to aggregate, organize, and query your scattered personal data using natural language. 500k+ organic views.",
+    "longDescription": "MindKeeper AI is a personal AI assistant designed as a search engine for your life. It centralizes scattered information from YouTube, Google Drive, Notion, social bookmarks, and local files into one knowledge base, then answers natural language questions with citations. Beyond personal use, it offered an API and SDK for developers to integrate AI-driven inference. It grew to 500,000+ organic views before I pivoted into Findr AI, which evolved into Cortex and HydraDB.",
     "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/mindkeeperai/banner-1.png",
-    "images": [   ],
+    "images": [],
     "techStack": [
       "FastAPI",
       "Python",
@@ -25,8 +25,8 @@
   {
     "id": 2,
     "name": "Navigator AI",
-    "description": "An open-source, self-learning browser automation agent with a self-improving memory layer.",
-    "longDescription": "Navigator AI is a powerful open-source browser automation agent that learns from your interactions to make web tasks easier and more efficient. With custom DOM parsers that reduce token usage by 90%, it's designed for performance. The agent features a self-improving memory layer using RAGs, allowing it to learn and personalize automation patterns for your recurring tasks. Whether you're a developer looking to integrate automation into your web app with its component library or a user wanting to streamline your browsing with its extension, Navigator AI offers a flexible and intelligent solution.",
+    "description": "An open-source, self-learning browser automation agent with a self-improving memory layer. Built before the agent browser wave.",
+    "longDescription": "Navigator AI is an open-source browser automation agent that learns from interactions. Custom DOM parsers reduce token usage by about 90%. A self-improving memory layer using RAG personalizes automation for recurring tasks. Built before Perplexity Comet and similar products popularized the category.",
     "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/navigator-ai/banner.png",
     "images": [
       "https://github.com/user-attachments/assets/12459b59-2d5f-4e1f-ad39-fb9b30bda9b4",
@@ -56,7 +56,7 @@
     "id": 3,
     "name": "BannerCraft",
     "description": "Won 1st place at Google GenAI Hackathon. An AI platform for effortless, custom banner creation.",
-    "longDescription": "BannerCraft is a revolutionary, award-winning platform that makes creating professional promotional banners a breeze. Simply upload a product image and a theme, and our advanced AI, powered by Gemini and Imagen3, generates a stunning, customized banner for you. But it doesn't stop there. BannerCraft includes a comprehensive editing suite with tools for text, shapes, and even a chatbot for generating custom images and stickers on the fly. We've also engineered it for precision, using computer vision to ensure 100% spelling and image accuracy.",
+    "longDescription": "BannerCraft makes professional promotional banners from a product image and theme using Gemini and Imagen3. Includes an editing suite and chatbot for custom images and stickers, with computer vision checks for spelling and image accuracy.",
     "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/banner.png",
     "images": [
       "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/ss1.png",
@@ -66,7 +66,7 @@
       "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/ss5.png",
       "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/bannercraft/ss6.png"
     ],
-    "videos":[
+    "videos": [
       "https://www.youtube.com/watch?v=dmdrlhGKbKM"
     ],
     "techStack": [
@@ -86,11 +86,9 @@
     "id": 4,
     "name": "Microservice Blogging Platform",
     "description": "A scalable blogging platform architected with 4 microservices in Go, ensuring high availability with HAProxy.",
-    "longDescription": "This project is a robust and scalable blogging platform built from the ground up using a microservices architecture. It features four distinct services for authentication, blogs, user feeds, and user management, all written in Go. To ensure high availability and smooth performance, the platform uses HAProxy for load balancing and Redis for caching. The entire system is containerized with Docker, allowing for easy horizontal scaling to handle growing user demand. It's a complete backend solution for a modern, high-performance blogging application.",
+    "longDescription": "Four Go microservices for auth, blogs, feeds, and user management, with HAProxy load balancing, Redis caching, and Docker for horizontal scale.",
     "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/ms/ms1.png",
-    "images": [
-      "https://private-user-images.githubusercontent.com/92905626/243328729-8cda3809-23ab-498a-a9ac-4572638d9cfd.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTYwMjMwMjYsIm5iZiI6MTc1NjAyMjcyNiwicGF0aCI6Ii85MjkwNTYyNi8yNDMzMjg3MjktOGNkYTM4MDktMjNhYi00OThhLWE5YWMtNDU3MjYzOGQ5Y2ZkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODI0VDA4MDUyNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFiZTEwMDhkZjEzOGUyZDI2NjViZDAxNDQ4NmNiNGUyOWQzOGE5YzEwZGI1NDIwYjgyOTk5Y2U0MTU4MzAxMmQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.y7sEP5r88XEbmb-2QWh9G_VlQ1jyZES6HD8LDLO8VGc"
-    ],
+    "images": [],
     "techStack": [
       "Go",
       "PostgreSQL",
@@ -101,15 +99,15 @@
     ],
     "githubUrl": "https://github.com/SohamRatnaparkhi/blogx-backend-go",
     "liveUrl": "",
-    "featured": true,
+    "featured": false,
     "isOpenSource": true,
     "category": "Backend"
   },
   {
     "id": 5,
     "name": "LitmusChaos Contributions",
-    "description": "Contributed to a CNCF sandbox project for chaos engineering as a Linux Foundation Mentee.",
-    "longDescription": "As a mentee in the Linux Foundation Mentorship Program, I had the opportunity to contribute to LitmusChaos, a CNCF sandbox project for chaos engineering. My work involved migrating critical GraphQL APIs to REST, which improved system reliability and performance. I also focused on refactoring the server package to reduce code duplication and significantly increase test coverage to over 90%, making the system more robust and maintainable.",
+    "description": "Contributed to a CNCF project for chaos engineering as a Linux Foundation Mentee.",
+    "longDescription": "As an LFX mentee I contributed to LitmusChaos: GraphQL to REST migration, server package refactoring to cut duplication, and test coverage above 90% across handlers and services.",
     "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/litmus/litmus1.png",
     "images": [
       "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/litmus/litmus1.png"
@@ -128,78 +126,10 @@
     "category": "DevOps"
   },
   {
-    "id": 6,
-    "name": "Blog-X",
-    "description": "A decentralized blogging platform built on the Ethereum blockchain, allowing users to interact and share thoughts.",
-    "longDescription": "Blog-X is a decentralized blogging platform that empowers users to share their ideas and connect with others in a censorship-resistant environment. Built on the Ethereum blockchain, it uses Web3.js for blockchain interaction and Push protocols for real-time communication, creating a truly decentralized and interactive experience. It's a glimpse into the future of social media, where users have full control over their content and data.",
-    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/blogx/blogx1.png",
-    "images": [
-      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/blogx/blogx1.png",
-      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/blogx/blogx2.png",
-      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/blogx/blogx3.png"
-    ],
-    "techStack": [
-      "Next.JS",
-      "MongoDB",
-      "Node.JS",
-      "Web3.js",
-      "Ethereum",
-      "Push protocols"
-    ],
-    "githubUrl": "https://github.com/Blog-X/blog_x",
-    "liveUrl": "https://blog-x-omega.vercel.app/",
-    "featured": false,
-    "isOpenSource": true,
-    "category": "Web3"
-  },
-  {
-    "id": 7,
-    "name": "Brain Tumor Detector",
-    "description": "A web application to detect brain tumors from MRI images using CNN models built with Tensorflow and Keras.",
-    "longDescription": "This project is a web application that leverages the power of deep learning to assist in the early detection of brain tumors. Using a Convolutional Neural Network (CNN) model built with Tensorflow and Keras, the application can analyze MRI images and identify potential tumors. The user-friendly web interface, built with Flask, allows for easy uploading and processing of images, making this powerful technology accessible to a wider audience.",
-    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/btd/btd1.jpg",
-    "images": [
-      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/btd/btd1.jpg",
-      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/btd/btd2.jpg"
-    ],
-    "techStack": [
-      "Python",
-      "Flask",
-      "Tensorflow",
-      "Keras",
-      "HTML",
-      "CSS"
-    ],
-    "githubUrl": "https://github.com/SohamRatnaparkhi/BTD_Web",
-    "liveUrl": "",
-    "featured": false,
-    "isOpenSource": true,
-    "category": "AI/ML"
-  },
-  {
-    "id": 8,
-    "name": "Voice Assistant",
-    "description": "A CLI tool that performs common tasks like opening websites, playing music, and reading PDF/DOCX files aloud.",
-    "longDescription": "This is a versatile command-line voice assistant designed to make your daily tasks easier. It can open websites, play your favorite music, and even send emails, all with simple voice commands. One of its standout features is its ability to act as a book reader, converting text from PDF and DOCX files into audio and reading it aloud, page by page. It's a powerful tool for productivity and accessibility.",
-    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/va/va1.png",
-    "images": [
-      "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/va/va1.png"
-    ],
-    "techStack": [
-      "Python",
-      "gTTS"
-    ],
-    "githubUrl": "https://github.com/SohamRatnaparkhi/Voice-Assistant",
-    "liveUrl": "https://github.com/SohamRatnaparkhi/Voice-Assistant/releases/download/v1.0.0/VoiceAssistant.exe",
-    "featured": false,
-    "isOpenSource": true,
-    "category": "Tooling"
-  },
-  {
     "id": 9,
     "name": "Fine-tuning LLMs with Federated Learning",
-    "description": "A research project exploring the use of Federated Learning to fine-tune Large Language Models, enhancing both privacy and efficiency.",
-    "longDescription": "This research project delves into the exciting intersection of Federated Learning (FL) and Large Language Models (LLMs). Traditional fine-tuning requires centralizing massive datasets, which raises significant privacy concerns. Our work demonstrates a decentralized approach using FL to fine-tune LLMs on local data without it ever leaving the device. By implementing the Federated Averaging (FedAvg) algorithm and optimizing with techniques like QLoRA for computational efficiency, we achieved significant loss reduction and accuracy improvements over standard methods, proving that privacy and high performance can coexist.",
+    "description": "IEEE research on privacy-preserving LLM fine-tuning with federated learning, blockchain, and secure multi-party computation.",
+    "longDescription": "Research project on federated fine-tuning of LLMs without centralizing raw data. Used FedAvg, QLoRA, and MPC concepts to fine-tune models like LLaMA 3.1 and Mistral Nemo. Benchmarked 52 models across 4 datasets. Published at IEEE Big Data.",
     "image": "",
     "images": [],
     "techStack": [
@@ -208,53 +138,10 @@
       "Federated Learning",
       "QLoRA"
     ],
-    "githubUrl": "",
+    "githubUrl": "https://github.com/SohamRatnaparkhi/fed-llm-fintuning-and-blockchain",
     "liveUrl": "https://drive.google.com/file/d/1EeHt2tBqxp2mRqG_hYKeH4uYXc9IllR6/view?usp=sharing",
     "featured": false,
     "isOpenSource": true,
     "category": "AI/ML"
-  },
-  {
-    "id": 10,
-    "name": "VIT-Marketplace",
-    "description": "A full-stack MERN application built to serve as an online marketplace for students of my college.",
-    "longDescription": "VIT-Marketplace is a feature-rich online marketplace designed specifically for the students of my college. Built on the MERN stack (MongoDB, Express, React, Node.js), it provides a platform for students to easily buy and sell products within the campus community. The application uses Redux for state management and TailwindCSS for a modern, responsive user interface. I was primarily responsible for developing the robust backend that powers the platform.",
-    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/market/market1.jpg",
-    "images": [
-    ],
-    "techStack": [
-      "MongoDB",
-      "Express",
-      "React",
-      "Node",
-      "Redux",
-      "TailwindCSS"
-    ],
-    "githubUrl": "https://github.com/SohamRatnaparkhi/Marketplace-Updated",
-    "liveUrl": "",
-    "featured": false,
-    "isOpenSource": true,
-    "category": "Full Stack"
-  },
-  {
-    "id": 11,
-    "name": "Transliterate",
-    "description": "An all-in-one web app for transliterating text, audio, and video between 106 languages using Google APIs.",
-    "longDescription": "Transliterate is a powerful web application that breaks down language barriers. It's an all-in-one tool capable of transliterating not just text, but also audio and video content between 106 different languages. The application is built with Flask and leverages a suite of Google APIs to perform its complex translation and transliteration tasks, offering a seamless and intuitive user experience.",
-    "image": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/projects/transliterate/tr1.png",
-    "images": [
-    ],
-    "techStack": [
-      "Flask",
-      "Google APIs",
-      "HTML5",
-      "CSS3",
-      "Bootstrap"
-    ],
-    "githubUrl": "https://github.com/SohamRatnaparkhi/transliterate-v2",
-    "liveUrl": "",
-    "featured": false,
-    "isOpenSource": true,
-    "category": "Tooling"
   }
 ]

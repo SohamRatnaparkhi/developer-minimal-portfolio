@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ProjectsPage from "./pages/ProjectsPage";
 import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "@/components/Navigation/ScrollToTop"
 import { Analytics } from "@vercel/analytics/react";
@@ -24,7 +25,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/blog" element={<BlogPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

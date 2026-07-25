@@ -1,0 +1,155 @@
+% Two-column AltaCV resume (main experience + sidebar).
+% Compile on Overleaf with pdfLaTeX. Requires: altacv.cls + page1sidebar.tex
+% Upload both resume.tex and page1sidebar.tex to the same Overleaf project.
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+\usepackage{multicol}
+\geometry{left=1cm,right=10.5cm,marginparwidth=7.5cm,marginparsep=1.2cm,top=1cm,bottom=1.25cm}
+
+% Colors first (used by hyperref + header)
+\definecolor{accentblue}{HTML}{0563C1}
+\definecolor{Ink}{HTML}{1A1A1A}
+\definecolor{BodyGrey}{HTML}{2E2E2E}
+
+\ifxetexorluatex
+  \setmainfont{Carlito}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+  \usepackage{hyperref}
+  \hypersetup{
+    colorlinks=true,
+    linkcolor=accentblue,
+    filecolor=accentblue,
+    urlcolor=accentblue,
+    pdftitle={Soham Ratnaparkhi - Resume},
+    pdfauthor={Soham Ratnaparkhi},
+  }
+\fi
+
+\newcommand{\printinfoline}[2]{\mbox{\textcolor{accent}{#1}\hspace{0.5em}\textcolor{body}{#2}}}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup\leavevmode
+  \begin{minipage}[t]{1.0\textwidth}
+    \raggedright
+    {\namefont\Huge \@name}\\[0.4ex]
+    {\large\textcolor{body}{Product Lead @ HydraDB \textbullet\ Founding Backend \& Infra}}
+  \end{minipage}%
+  \raisebox{1.0ex}[0pt][0pt]{%
+    \begin{minipage}[t]{1.0\textwidth}
+      \raggedleft
+      \printinfoline{\faPhone}{\href{tel:+919767134529}{+91-9767134529}} \quad
+      \printinfoline{\faEnvelopeO}{\href{mailto:soham.ratnaparkhi@gmail.com}{soham.ratnaparkhi@gmail.com}} \\
+      \vspace{0.5ex}
+      \printinfoline{\faMapMarker}{Pune, India \textbullet\ Remote} \quad
+      \printinfoline{\faGithub}{\href{https://github.com/SohamRatnaparkhi}{GitHub}} \quad
+      \printinfoline{\faLinkedin}{\href{https://www.linkedin.com/in/soham-ratnaparkhi-3a3775ab/}{LinkedIn}} \quad
+      \printinfoline{\faHome}{\href{https://sohamratnaparkhi.com}{Portfolio}}
+    \end{minipage}%
+  }
+  \vspace{1.5ex}
+  \endgroup
+}
+\makeatother
+
+\colorlet{heading}{Ink}
+\colorlet{accent}{Ink}
+\colorlet{emphasis}{BodyGrey}
+\colorlet{body}{BodyGrey}
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Soham Ratnaparkhi}
+\personalinfo{%
+  \phone{+91-9767134529}
+  \email{soham.ratnaparkhi@gmail.com}
+  \location{Pune, India \textbullet\ Remote}
+  \github{\href{https://github.com/SohamRatnaparkhi}{GitHub}}
+  \linkedin{\href{https://www.linkedin.com/in/soham-ratnaparkhi-3a3775ab/}{LinkedIn}}
+  \homepage{\href{https://sohamratnaparkhi.com}{sohamratnaparkhi.com}}
+}
+
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+\AtBeginEnvironment{itemize}{\small}
+
+\cvsection[page1sidebar]{Experience}
+
+%% ---- HydraDB: Product Lead ----
+\cvevent{\textbf{Product Lead}}{\href{https://hydradb.com}{HydraDB} {\small(\$6.5M seed)}}{\textbf{May 2026 -- Present}}{\textbf{Remote}}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Promoted} to Product Lead after owning backend and infrastructure from day zero on the team that raised a \textbf{\$6.5M seed}.
+    \item \textbf{Lead product} for HydraDB's context graph: roadmap, connectors, hybrid search quality, and developer experience for agents in production.
+    \item \textbf{Scaled connectors} across \textbf{30+ SaaS tools} (email, tickets, CRM, warehouses incl.\ BigQuery) so teams search one brain instead of twenty apps.
+    \item \textbf{Grew hybrid retrieval} customers trust: sub-200ms search, SDKs on \textbf{npm + PyPI}, quality past the demo.
+    \item \textbf{Building a graph database from scratch} on object storage: OpenCypher + Bolt (Neo4j-driver compatible), sparse indexes, cloud-native durability. On our multi-hop agent workloads, roughly \textbf{10$\times$ faster} traversals than Neo4j.
+\end{itemize}
+\vspace{-0.5em}
+\divider
+\vspace{-0.35em}
+
+%% ---- HydraDB: Founding Backend & Infra ----
+\cvevent{\textbf{Founding Backend \& Infrastructure Engineer}}{\href{https://hydradb.com}{HydraDB}}{\textbf{Jun 2025 -- Present}}{\textbf{Remote}}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Sole owner} of backend and infrastructure from day zero. Shipped indexing at \textbf{100k+ files/day} across customer orgs ($\sim$1M+ tokens/min).
+    \item \textbf{Self-hosted} production on Kubernetes/EKS: \textbf{Milvus}, \textbf{FalkorDB}, \textbf{ClickHouse}, \textbf{Kafka}, \textbf{Temporal}, full observability stack, multi-tenant isolation.
+    \item \textbf{Cut} end-to-end hybrid search under \textbf{200ms} (sub-10ms on vector and graph query layers).
+    \item \textbf{Redesigned} ingestion after production pain: Temporal workflows, exactly-once inbox, per-org Kafka fairness, claim-check payloads, replay-safe vector + graph sinks.
+    \item \textbf{Migrated} Kafka off a path causing silent data loss (MSK Serverless $\rightarrow$ Strimzi KRaft); OpenAPI $\rightarrow$ npm/PyPI SDKs; led \textbf{usecortex.ai $\rightarrow$ hydradb.com}.
+    \item Product engineer through the \textbf{\$6.5M seed}; shaped the core offering. Now deep in a graph database built from scratch (not a Neo4j wrapper) for multi-tenant company memory and \textbf{10$\times$} multi-hop speed on our benchmarks.
+    \item \textbf{Tech:} Python, FastAPI, Rust, Kubernetes, Temporal, Kafka, Milvus, FalkorDB, ClickHouse, OpenCypher, AWS, Helm, ArgoCD, OpenTelemetry
+\end{itemize}
+\vspace{-0.5em}
+\divider
+\vspace{-0.35em}
+
+%% ---- Findr ----
+\cvevent{\textbf{Founding Engineer}}{\href{https://usefindr.com}{Findr AI}}{\textbf{Apr 2025 -- Nov 2025}}{\textbf{Remote}}
+\begin{itemize}[leftmargin=*]
+    \item Built \textbf{Pro-Search}, a production RAG system with multi-step retrieval; work evolved into Cortex / HydraDB.
+    \item Scaled ingestion and search backends; cut p50/p90 latency by \textbf{50\%+} and improved accuracy by $\sim$\textbf{20\%} via chunking and retrieval strategy.
+    \item \textbf{Tech:} Python, FastAPI, AWS, SQS, Redis, MongoDB, LLMs, RAG
+\end{itemize}
+\vspace{-0.5em}
+\divider
+\vspace{-0.35em}
+
+%% ---- Mitacs ----
+\cvevent{\textbf{Research Intern}}{\href{https://www.uwindsor.ca/}{University of Windsor (Mitacs)}}{\textbf{Aug 2024 -- Nov 2024}}{\textbf{Windsor, Canada} \textbar\ \href{https://github.com/SohamRatnaparkhi/fed-llm-fintuning-and-blockchain}{\faGithub}}
+\begin{itemize}[leftmargin=*]
+    \item Co-authored \textbf{IEEE} paper on privacy-preserving LLM fine-tuning: federated learning, blockchain, and secure multi-party computation (LLaMA 3.1, Mistral Nemo).
+    \item Benchmarked FL vs traditional fine-tuning across \textbf{52 models} and 4 datasets; more stable training for sensitive domains. Used \textbf{QLoRA} on constrained hardware.
+    \item \textbf{Tech:} Python, PyTorch, Hugging Face, PEFT, QLoRA, Federated Learning
+\end{itemize}
+\vspace{-0.5em}
+\divider
+\vspace{-0.35em}
+
+%% ---- Barclays ----
+\cvevent{\textbf{Technology Intern}}{\href{https://home.barclays/}{Barclays}}{\textbf{Jun 2024 -- Jul 2024}}{\textbf{Pune, India}}
+\begin{itemize}[leftmargin=*]
+    \item Cut Kubernetes fleet monitoring latency from \textbf{8 minutes to under 1 minute} (8$\times$) across 1,000+ pods via pooling, batching, multithreading, and Redis.
+    \item Built a dynamic query engine with \textbf{27 filters} and 100+ sub-filters for real-time DevOps observability.
+    \item \textbf{Tech:} Kubernetes, Spring Boot, SQL, Redis
+\end{itemize}
+\vspace{-0.5em}
+\divider
+\vspace{-0.35em}
+
+%% ---- Litmus ----
+\cvevent{\textbf{Linux Foundation Mentee (LFX)}}{\href{https://litmuschaos.io/}{LitmusChaos -- CNCF}}{\textbf{Jun 2023 -- Aug 2023}}{\textbf{Remote} \textbar\ \href{https://gist.github.com/SohamRatnaparkhi/723d18ee1114aeff4f37a7cb2cdb44bc}{\faGithub}}
+\begin{itemize}[leftmargin=*]
+    \item Merged \textbf{7 PRs} on test infrastructure, interface refactoring, and deduplication; drove \textbf{90\%+} test coverage.
+    \item Contributed to GraphQL-to-REST migration and production Go services on Kubernetes.
+    \item \textbf{Tech:} Go, Kubernetes, Docker, GraphQL, REST
+\end{itemize}
+
+\cvsection{Education}
+\cvevent{\textbf{B.Tech. Computer Engineering -- 9.29 CGPA (3.72/4)}}{\href{https://www.vit.edu/}{Vishwakarma Institute of Technology}}{\textbf{2021 -- 2025}}{\textbf{Pune, Maharashtra}}
+
+\end{document}

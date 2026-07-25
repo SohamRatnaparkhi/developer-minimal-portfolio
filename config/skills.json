@@ -5,13 +5,13 @@
     "category": "Language"
   },
   {
-    "name": "Java",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/java.svg",
+    "name": "Go",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/golang.svg",
     "category": "Language"
   },
   {
-    "name": "GoLang",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/golang.svg",
+    "name": "Rust",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg",
     "category": "Language"
   },
   {
@@ -20,8 +20,18 @@
     "category": "Language"
   },
   {
+    "name": "Java",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/java.svg",
+    "category": "Language"
+  },
+  {
     "name": "FastAPI",
     "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/fastapi.png",
+    "category": "Framework"
+  },
+  {
+    "name": "Spring Boot",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
     "category": "Framework"
   },
   {
@@ -30,18 +40,28 @@
     "category": "Framework"
   },
   {
-    "name": "TensorFlow",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/tensorflow.svg",
-    "category": "Framework"
-  },
-  {
     "name": "Next.js",
     "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/nextjs.svg",
     "category": "Framework"
   },
   {
-    "name": "MongoDB",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/mongodb.svg",
+    "name": "Milvus",
+    "logo": "https://cdn.jsdelivr.net/gh/milvus-io/milvus-docs@master/assets/milvus_logo.png",
+    "category": "Database"
+  },
+  {
+    "name": "FalkorDB",
+    "logo": "https://avatars.githubusercontent.com/u/140034498?s=200&v=4",
+    "category": "Database"
+  },
+  {
+    "name": "ClickHouse",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clickhouse/clickhouse-original.svg",
+    "category": "Database"
+  },
+  {
+    "name": "SlateDB",
+    "logo": "https://avatars.githubusercontent.com/u/148555833?s=200&v=4",
     "category": "Database"
   },
   {
@@ -55,11 +75,6 @@
     "category": "Database"
   },
   {
-    "name": "MySQL",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/mysql.svg",
-    "category": "Database"
-  },
-  {
     "name": "MongoDB",
     "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/mongodb.svg",
     "category": "Database"
@@ -70,33 +85,63 @@
     "category": "Database"
   },
   {
-    "name": "Pinecone",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/pinecone.png",
-    "category": "Database"
-  },
-  {
-    "name": "Weaviate",
-    "logo": "https://avatars.githubusercontent.com/u/37794290?s=48&v=48 ",
-    "category": "Database"
-  },
-  {
-    "name": "Git",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/git.svg",
-    "category": "Tools"
+    "name": "Kubernetes",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/kubernetes.svg",
+    "category": "Infrastructure"
   },
   {
     "name": "Docker",
     "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/docker.svg",
-    "category": "Tools"
+    "category": "Infrastructure"
   },
   {
-    "name": "Kubernetes",
-    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/kubernetes.svg",
-    "category": "Tools"
+    "name": "Helm",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/helm/helm-original.svg",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "ArgoCD",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Terraform",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Temporal",
+    "logo": "https://avatars.githubusercontent.com/u/56493103?s=200&v=4",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Kafka",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Prometheus",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Grafana",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg",
+    "category": "Infrastructure"
   },
   {
     "name": "AWS",
     "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/aws.svg",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "OpenTelemetry",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opentelemetry/opentelemetry-original.svg",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Git",
+    "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/skills/git.svg",
     "category": "Tools"
   }
 ]

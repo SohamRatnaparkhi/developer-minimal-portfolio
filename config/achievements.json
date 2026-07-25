@@ -1,6 +1,24 @@
 [
   {
     "id": 1,
+    "title": "HydraDB $6.5M Seed",
+    "description": "Founding engineer from day zero who built the backend and infrastructure behind the product that raised a $6.5M seed. Now Product Lead; building a graph database from scratch targeting ~10x multi-hop vs Neo4j.",
+    "date": "2025–2026",
+    "category": "Startup",
+    "icon": "🚀",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "YC India Startup School",
+    "description": "Selected for Y Combinator India Startup School while building HydraDB as a founding engineer.",
+    "date": "2026",
+    "category": "Program",
+    "icon": "🟠",
+    "featured": true
+  },
+  {
+    "id": 3,
     "title": "Winner, Google GenAI Hackathon 2024",
     "description": "Secured first place in the BigBasket track against over 1,000 participants in a national-level hackathon.",
     "date": "2024",
@@ -9,30 +27,39 @@
     "featured": true
   },
   {
-    "id": 2,
-    "title": "MITACS Globalink Research Intern",
-    "description": "Awarded the prestigious research internship with a <15% acceptance rate among thousands of international applicants.",
+    "id": 4,
+    "title": "Mitacs Globalink Research Intern",
+    "description": "Awarded a competitive research internship with under 15% acceptance. Co-authored an IEEE paper on privacy-preserving LLM fine-tuning.",
     "date": "2024",
     "category": "Academia",
     "icon": "🎓",
     "featured": true
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "Global Web3 Hackathon Winner",
-    "description": "Won prizes at multiple international Web3 hackathons, including ETHIndia 2022 & 2023, ETHForAll 2023, and FVM Spacewarp 2023.",
-    "date": "2023",
+    "description": "Won prizes at ETHIndia 2022 & 2023, ETHForAll 2023, and FVM Spacewarp 2023.",
+    "date": "2022–2023",
     "category": "Competition",
     "icon": "💻",
     "featured": true
   },
   {
-    "id": 4,
-    "title": "Microsoft Learn Student Ambassador & President",
-    "description": "Led a community of 50+ students, organizing national hackathons and technical bootcamps.",
-    "date": "2023",
+    "id": 6,
+    "title": "MLSC President · Hackspiration 2024",
+    "description": "Grew a student tech community to 500+ members, led a team of 50, and raised a $10k+ prize pool for a hackathon with 1,200+ participants.",
+    "date": "2023–2024",
     "category": "Leadership",
     "icon": "🎤",
+    "featured": true
+  },
+  {
+    "id": 7,
+    "title": "LFX Mentorship · LitmusChaos (CNCF)",
+    "description": "Paid Linux Foundation mentee. Merged 7 PRs into a CNCF chaos engineering project with 90%+ test coverage.",
+    "date": "2023",
+    "category": "Open Source",
+    "icon": "🐧",
     "featured": true
   }
 ]

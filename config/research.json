@@ -1,7 +1,20 @@
 [
   {
     "id": 1,
-    "title": "Text-to-speech and speech-to-text converter—voice assistant",
+    "title": "Fine-tuning Large Language Models using Federated Learning & Blockchain",
+    "authors": [
+      "S Ratnaparkhi",
+      "S Samet"
+    ],
+    "publication": "IEEE Big Data 2024",
+    "date": "2024",
+    "link": "https://scholar.google.com/citations?user=IRU_Fy4AAAAJ&hl=en",
+    "category": "AI/ML",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Text-to-speech and speech-to-text converter — voice assistant",
     "authors": [
       "S Janokar",
       "S Ratnaparkhi",
@@ -10,12 +23,13 @@
     ],
     "publication": "Inventive Systems and Control: Proceedings of ICISC 2023",
     "date": "2023",
+    "citations": 17,
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IRU_Fy4AAAAJ&citation_for_view=IRU_Fy4AAAAJ:d1gkVwhDpl0C",
     "category": "AI/ML",
     "featured": true
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Deepfake detection for preventing Audio and Video frauds using Advanced Deep Learning Techniques",
     "authors": [
       "R Bharadwaj",
@@ -26,12 +40,13 @@
     ],
     "publication": "2023 International Conference on Integrated Intelligence and Communication",
     "date": "2023",
+    "citations": 8,
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IRU_Fy4AAAAJ&citation_for_view=IRU_Fy4AAAAJ:u-x6o8ySG0sC",
     "category": "Deep Learning",
     "featured": true
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Next Generation Social Media Platform to Move from Centralization to Decentralization of Data",
     "authors": [
       "ML Dhore",
@@ -40,26 +55,45 @@
       "O Surase",
       "R Chandak"
     ],
-    "publication": "2023 7th International Conference On Computing, Communication, Control And...",
+    "publication": "2023 7th International Conference On Computing, Communication, Control And Automation",
     "date": "2023",
+    "citations": 4,
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IRU_Fy4AAAAJ&citation_for_view=IRU_Fy4AAAAJ:u5HHmVD_uO8C",
     "category": "Web3",
     "featured": true
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Driver Drowsiness Detection Using CNN and ESP32 CAM",
     "authors": [
       "V Bhanuse",
       "S Ratnaparkhi",
       "R Loya",
       "R Sasne",
-      "T Rokade"
+      "T Rokade",
+      "R Chandak"
     ],
     "publication": "International Conference on Data Science, Computation and Security",
     "date": "2023",
+    "citations": 1,
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IRU_Fy4AAAAJ&citation_for_view=IRU_Fy4AAAAJ:2osOgNQ5qMEC",
     "category": "Computer Vision",
     "featured": true
+  },
+  {
+    "id": 6,
+    "title": "Survey on Deepfake Detection for Preventing Audio and Video Frauds Using Advanced Deep Learning Techniques",
+    "authors": [
+      "R Bharadwaj",
+      "S Ratnaparkhi",
+      "R Rajpurohit",
+      "R Pandita",
+      "K Rahate"
+    ],
+    "publication": "International Conference on Intelligent Vision and Computing",
+    "date": "2023",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IRU_Fy4AAAAJ",
+    "category": "Deep Learning",
+    "featured": false
   }
 ]

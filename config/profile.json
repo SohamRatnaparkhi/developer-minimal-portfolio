@@ -1,67 +1,59 @@
 {
   "name": "Soham Ratnaparkhi",
   "shortName": "Soham R.",
-  "title": "AI & Full-Stack Engineer | Innovator",
+  "title": "Product Lead @ HydraDB · Backend & Infra Eng.",
   "bio": {
     "sm": {
       "highlight_words": [
         {
-          "text": "Findr AI"
+          "text": "HydraDB"
         }
       ],
       "hyperlinks": [
         {
-          "text": "Findr AI",
-          "url": "https://usefindr.com"
+          "text": "HydraDB",
+          "url": "https://hydradb.com"
         }
       ],
       "paragraphs": [
-        "I'm Soham, an AI and Backend Engineer at Findr AI where I tackle complex challenges related to building the best retrieval system for AI agents.",
-        "My passion is building products that make a real difference."
+        "I'm Soham. I lead product at HydraDB after growing the entire backend and infrastructure from day zero, the same systems that now index 100k+ files a day at sub-200ms search latency.",
+        "Currently shipping connectors, hybrid retrieval, and a graph database built from scratch on object storage, targeting ~10x multi-hop speed vs Neo4j."
       ]
     },
     "md": {
       "highlight_words": [
-        "Findr AI"
+        "HydraDB"
       ],
       "hyperlinks": [
         {
-          "text": "Findr AI",
-          "url": "https://usefindr.com"
-        },
-        {
-          "text": "build theirs",
-          "url": "https://usecortex.ai"
+          "text": "HydraDB",
+          "url": "https://hydradb.com"
         }
       ],
       "paragraphs": [
-        "Hi, I'm Soham Ratnaparkhi, a software developer driven to build products that make a real impact. I thrive on solving complex challenges in scalability, search engines, and AI.",
-        "Currently, I'm a Product Engineer at Findr AI, where we're building the strongest search/retrieval engine for AI agents. I love diving deeper into foundational LLMs and scalable backends, sharing what I learn through my blog."
+        "Hi, I'm Soham Ratnaparkhi. I lead product at HydraDB after building the backend and infrastructure from scratch as a founding engineer. What started as owning every Kafka topic, Temporal workflow, and Kubernetes node became owning product direction for a context graph platform that raised a $6.5M seed.",
+        "I care about systems that survive production: hybrid vector and graph retrieval under 200ms, durable ingestion that does not lose work, and a graph database we are building from the ground up on object storage for roughly 10x multi-hop performance vs Neo4j on our agent workloads. IEEE-published researcher, CNCF open-source mentee, and still in the weeds of the code."
       ]
     },
     "lg": {
       "highlight_words": [
-        "Findr AI"
+        "HydraDB"
       ],
       "hyperlinks": [
         {
-          "text": "Findr AI",
-          "url": "https://usefindr.com"
-        },
-        {
-          "text": "build theirs",
-          "url": "https://usecortex.ai"
+          "text": "HydraDB",
+          "url": "https://hydradb.com"
         }
       ],
       "paragraphs": [
-        "Hi, I'm Soham Ratnaparkhi, a software developer driven to build products that make a real impact. I thrive on solving complex challenges in scalability, search engines, and AI.",
-        "Currently, I'm a Product Engineer at Findr AI, where we're building the strongest search/retrieval engine for AI agents. I love diving deeper into foundational LLMs and scalable backends.",
-        "I share what I learn through my blog and socials."
+        "Hi, I'm Soham Ratnaparkhi. I lead product at HydraDB after building the backend and infrastructure from scratch as a founding engineer. What started as owning every Kafka topic, Temporal workflow, and Kubernetes node became owning product direction for a context graph platform that raised a $6.5M seed.",
+        "I care about systems that survive production: hybrid vector and graph retrieval under 200ms, durable ingestion that does not lose work, multi-tenant databases on self-hosted Kubernetes, and a graph database we are building from the ground up on object storage targeting roughly 10x multi-hop speed vs Neo4j on our workloads.",
+        "IEEE-published researcher, Linux Foundation / CNCF mentee, and still writing the code. I write about infrastructure, retrieval systems, graph engines, and building systems that scale."
       ]
     }
   },
   "email": "soham.ratnaparkhi@gmail.com",
-  "location": "Pune, India",
+  "location": "Pune, India · Remote (SF Bay Area)",
   "profileImage": "https://dkedzrt1xmtkb.cloudfront.net/public/passport_size_photo.jpg",
   "socialLinks": {
     "github": "https://github.com/sohamratnaparkhi",

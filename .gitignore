@@ -7,10 +7,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies & build
 node_modules
 dist
 dist-ssr
 *.local
+.vite
+
+# Env / secrets
+.env
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +29,30 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*~
+
+# LaTeX build artifacts (keep source .tex + intentional PDFs)
+*.aux
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+
+# Local / scratch (not part of the portfolio product)
+.hydradb-plugin-data/
+.resume_recover/
+Claude-YC startup school*.md
+*.tmp
+*.bak
+.cache/

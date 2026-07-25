@@ -7,7 +7,8 @@ import projectsData from '../../../config/projects.json';
 import ProjectDetailModal from './ProjectDetailModal';
 
 const ProjectsSection: React.FC = () => {
-  const featuredProjects = projectsData.filter(project => project.featured).slice(0, 4);
+  // Three featured cards fill a clean 3-col row on desktop
+  const featuredProjects = projectsData.filter(project => project.featured).slice(0, 3);
   const [selectedProject, setSelectedProject] = useState<typeof projectsData[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -18,7 +19,7 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <section id="projects" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6 w-full md:w-2/3 lg:w-1/2 section-surface p-6 md:p-8">
+      <div className="container mx-auto px-6 max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
@@ -29,12 +30,12 @@ const ProjectsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 mb-10">
+        {/* Projects Grid — full row of 3 on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {featuredProjects.map((project) => (
             <div
               key={project.id}
-              className="project-card bg-card rounded-lg overflow-hidden border border-border/50"
+              className="project-card bg-card rounded-lg overflow-hidden border border-border/50 flex flex-col h-full"
             >
               {/* Project Image */}
               {project.image && project.image.trim() !== '' ? (
@@ -54,20 +55,20 @@ const ProjectsSection: React.FC = () => {
               )}
 
               {/* Project Content */}
-              <div className="p-4">
-                <div className="flex items-start justify-between mb-3">
+              <div className="p-4 flex flex-col flex-1">
+                <div className="flex items-start justify-between mb-3 gap-2">
                   <h3 className="text-lg font-semibold text-foreground">
                     {project.name}
                   </h3>
-                  <div className="flex gap-2">
-                    {project.isOpenSource && (
+                  <div className="flex gap-1 shrink-0">
+                    {project.isOpenSource && project.githubUrl && (
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-1 hover:bg-muted rounded-lg transition-colors"
                       >
-                        <Github className="h-3 w-3" />
+                        <Github className="h-3.5 w-3.5" />
                       </a>
                     )}
                     {project.liveUrl && (
@@ -77,13 +78,13 @@ const ProjectsSection: React.FC = () => {
                         rel="noopener noreferrer"
                         className="p-1 hover:bg-muted rounded-lg transition-colors"
                       >
-                        <ExternalLink className="h-3 w-3" />
+                        <ExternalLink className="h-3.5 w-3.5" />
                       </a>
                     )}
                   </div>
                 </div>
 
-                <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                <p className="text-sm text-muted-foreground mb-3 line-clamp-3 flex-1">
                   {project.description}
                 </p>
 
@@ -102,7 +103,7 @@ const ProjectsSection: React.FC = () => {
                 </div>
 
                 {/* Category */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-auto">
                   <Badge variant="outline" className="text-[10px] py-0.5 px-1.5">
                     {project.category}
                   </Badge>

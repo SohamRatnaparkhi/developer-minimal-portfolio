@@ -17,6 +17,7 @@ interface Research {
   link: string;
   category: string;
   featured: boolean;
+  citations?: number;
 }
 
 interface Achievement {
@@ -113,9 +114,20 @@ const ExtraCurricularsSection: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
             Extra-Curriculars
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground mb-2">
             Research contributions and achievements beyond development
           </p>
+          <a
+            href="https://scholar.google.com/citations?user=IRU_Fy4AAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
+          >
+            Google Scholar: h-index 3, 30+ citations
+            <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
 
         {/* Tabs for Desktop / Horizontal Scroll for Mobile */}
@@ -132,19 +144,26 @@ const ExtraCurricularsSection: React.FC = () => {
               {featuredResearch.map((research) => (
                 <div
                   key={research.id}
-                  className="research-card bg-card rounded-lg p-6 border border-border/50 hover:border-primary/20 transition-all hover:shadow-lg cursor-pointer"
+                  className="research-card bg-card rounded-lg p-6 border border-border/50 hover:border-primary/20 transition-all hover:shadow-lg cursor-pointer group"
                   onClick={() => handleResearchClick(research)}
                 >
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">
+                  <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
                     {research.title}
                   </h3>
                   <p className="text-muted-foreground mb-4 text-sm leading-relaxed line-clamp-3">
                     {research.publication}
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <Calendar className="h-3 w-3 mr-1" />
-                      {formatDate(research.date)}
+                    <div className="flex items-center gap-3">
+                      <div className="flex items-center text-xs text-muted-foreground">
+                        <Calendar className="h-3 w-3 mr-1" />
+                        {formatDate(research.date)}
+                      </div>
+                      {research.citations != null && research.citations > 0 && (
+                        <span className="text-xs text-muted-foreground font-medium">
+                          {research.citations} citations
+                        </span>
+                      )}
                     </div>
                     <Badge variant="outline" className="text-xs">
                       {research.category}

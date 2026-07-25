@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Github, ChevronDown } from 'lucide-react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { Github, ChevronDown, Loader2 } from 'lucide-react';
 import GitHubCalendar from 'react-github-calendar';
 import profileData from '../../../config/profile.json';
 import { useTheme } from '@/hooks/useTheme';
@@ -8,10 +8,10 @@ const GitHubActivity: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const [selectedYear, setSelectedYear] = useState<number | 'last'>('last');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { isDark } = useTheme();
   const username = profileData.githubUsername;
-
 
   const yearOptions = [
     { value: 'last' as const, label: 'Last Year' },
@@ -34,6 +34,18 @@ const GitHubActivity: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const handleYearChange = useCallback((value: number | 'last') => {
+    setIsLoading(true);
+    setSelectedYear(value);
+    setIsDropdownOpen(false);
+  }, []);
+
+  const handleTransformData = useCallback((contributions: Array<{ date: string; count: number; level: 0 | 1 | 2 | 3 | 4 }>) => {
+    if (isLoading && contributions.length > 0) {
+      setIsLoading(false);
+    }
+    return contributions;
+  }, [isLoading]);
 
   return (
     <section id="github" className="py-20 bg-muted/30">
@@ -66,10 +78,7 @@ const GitHubActivity: React.FC = () => {
                     {yearOptions.map((option) => (
                       <button
                         key={option.value}
-                        onClick={() => {
-                          setSelectedYear(option.value);
-                          setIsDropdownOpen(false);
-                        }}
+                        onClick={() => handleYearChange(option.value)}
                         className={`w-full text-left px-4 py-2 text-sm hover:bg-muted/50 transition-colors ${
                           selectedYear === option.value ? 'bg-primary/10 text-primary font-medium' : ''
                         }`}
@@ -92,23 +101,32 @@ const GitHubActivity: React.FC = () => {
             </a>
           </div>
 
-          <div className="bg-card p-6 rounded-lg border border-border/50 overflow-x-auto">
-            <GitHubCalendar
-              username={username}
-              year={selectedYear}
-              blockSize={12}
-              blockMargin={4}
-              blockRadius={2}
-              fontSize={12}
-              colorScheme={isDark ? 'dark' : 'light'}
-              theme={{
-                light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
-                dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353']
-              }}
-              style={{
-                color: 'hsl(var(--muted-foreground))'
-              }}
-            />
+          <div className="bg-card p-6 rounded-lg border border-border/50 overflow-x-auto relative min-h-[160px]">
+            {isLoading && (
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-card/80 backdrop-blur-sm rounded-lg">
+                <Loader2 className="h-8 w-8 text-primary animate-spin mb-3" />
+                <p className="text-sm text-muted-foreground">Loading contribution data...</p>
+              </div>
+            )}
+            <div className={isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}>
+              <GitHubCalendar
+                username={username}
+                year={selectedYear}
+                blockSize={12}
+                blockMargin={4}
+                blockRadius={2}
+                fontSize={12}
+                colorScheme={isDark ? 'dark' : 'light'}
+                transformData={handleTransformData}
+                theme={{
+                  light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
+                  dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353']
+                }}
+                style={{
+                  color: 'hsl(var(--muted-foreground))'
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>

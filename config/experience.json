@@ -1,25 +1,92 @@
 [
   {
     "id": 1,
+    "link": "https://hydradb.com",
+    "company": "HydraDB",
+    "logo": "/logos/hydradb-icon.png",
+    "employmentType": "Full-time",
+    "location": "San Francisco Bay Area · Remote",
+    "startDate": "Jun 2025",
+    "endDate": "Present",
+    "current": true,
+    "highlight": "$6.5M seed",
+    "summary": "Joined as founding engineer. Owned backend, infrastructure, and ingestion from day zero: hybrid vector + graph retrieval under 200ms, 100k+ files indexed daily, full self-hosted Kubernetes stack. Promoted to Product Lead. Helped ship the platform that raised a $6.5M seed. Now leading product while building a graph database from scratch on object storage, targeting ~10x multi-hop performance vs Neo4j on our workloads.",
+    "roles": [
+      {
+        "position": "Product Lead",
+        "startDate": "May 2026",
+        "endDate": "Present",
+        "current": true,
+        "responsibilities": [
+          "Promoted to Product Lead after owning backend and infrastructure from day zero on the team that raised a $6.5M seed.",
+          "Lead product for HydraDB's context graph platform: roadmap, prioritization, and how customers put company knowledge into agents that actually work in production.",
+          "Scaled the connectors product across 30+ SaaS tools (email, tickets, CRM, warehouses including BigQuery table rows) so teams search one brain instead of twenty apps.",
+          "Grew hybrid search into a product customers trust: sub-200ms retrieval, npm + PyPI SDKs from OpenAPI, and quality that holds up past the demo.",
+          "Building a graph database from scratch on object storage: OpenCypher and Bolt for Neo4j-driver compatibility, sparse indexes, and cloud-native durability. On our multi-hop agent workloads we are seeing roughly 10x faster traversals than Neo4j."
+        ]
+      },
+      {
+        "position": "Backend & Infra Eng.structure Engineer",
+        "startDate": "Jun 2025",
+        "endDate": "Present",
+        "current": true,
+        "responsibilities": [
+          "Sole owner of the backend and infrastructure from day zero. Built and shipped indexing for 100,000+ files daily across customer orgs, at roughly 1M+ tokens per minute on average.",
+          "Self-hosted the full production stack on Kubernetes/EKS: Milvus (vector), FalkorDB (graph), ClickHouse (analytics), Kafka, Temporal, plus Prometheus, Grafana, and Alertmanager with multi-tenant isolation.",
+          "Brought end-to-end hybrid search under 200ms, with sub-10ms queries on both Milvus and FalkorDB for real-time vector + graph retrieval.",
+          "Redesigned the full document ingestion pipeline after production pain: Temporal durable workflows, transactional inbox for exactly-once delivery, per-org Kafka topics for fair multi-tenant scheduling, claim-check for large payloads, and replay-safe multi-store sinks (vector + graph + metadata).",
+          "Migrated Kafka off a managed path that was silently losing data (MSK Serverless → Strimzi KRaft); auto-published client SDKs from OpenAPI; led the platform move from usecortex.ai to hydradb.com.",
+          "Worked as a product engineer throughout and helped shape the core offering that raised a $6.5M seed round. Now deep in the next storage layer: a graph database built from scratch (not a Neo4j wrapper) for multi-tenant company memory and ~10x multi-hop speed on our benchmarks."
+        ]
+      }
+    ],
+    "techStack": [
+      "Product",
+      "Kubernetes",
+      "Temporal",
+      "Kafka",
+      "Milvus",
+      "FalkorDB",
+      "ClickHouse",
+      "FastAPI",
+      "Rust",
+      "Python",
+      "AWS",
+      "OpenTelemetry"
+    ],
+    "misc": [
+      {
+        "work": [
+          {
+            "text": "HydraDB",
+            "url": "https://hydradb.com"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
     "link": "https://usefindr.com",
     "company": "Findr AI",
     "logo": "https://www.usefindr.com/static/images/logos/findr.svg",
-    "position": "Product | Founding Engineer",
-    "startDate": "April 2025",
-    "endDate": "Present",
-    "current": true,
+    "position": "Founding Engineer",
+    "employmentType": "Full-time",
+    "location": "San Francisco Bay Area · Remote",
+    "startDate": "Apr 2025",
+    "endDate": "Nov 2025",
+    "current": false,
     "responsibilities": [
-      "Engineered Pro-Search, a production-grade RAG system with chain-of-thought planning and optimized multi-step retrieval.",
-      "Built scalable data ingestion pipelines to process embed and ingest 1000s of documents, ensuring optimal server utilization and zero downtime.",
-      "Increased search engine accuracy by 20% through custom chunking, advanced retrieval strategies, and context management.",
-      "Reduced key latency metrics (p50/p90) by over 50% by optimizing the backend with multi-threading, async-coroutines and auto-scaling.",
-      "Built the strongly types, scalable and user-friendly APIs and SDKs to expose these ingestion and search pipelines"
+      "Joined as a founding engineer and owned core retrieval: Pro-Search, a production RAG system with multi-step retrieval and planning.",
+      "Built scalable ingestion to process, embed, and index thousands of documents with multi-threading, async processing, and auto-scaling. Cut p50/p90 search latency by over 50%.",
+      "Increased search accuracy by about 20% through better chunking and retrieval. Shipped typed APIs and SDKs for ingestion and search.",
+      "This work became the foundation of Cortex / HydraDB as the product evolved into an ontology-first context graph platform."
     ],
     "techStack": [
       "FastAPI",
       "AWS",
       "SQS",
-      "Valkey (redis-fork)",
+      "Redis",
       "MongoDB",
       "LLMs",
       "RAG"
@@ -30,10 +97,6 @@
           {
             "text": "Findr AI",
             "url": "https://usefindr.com"
-          }, 
-          {
-            "text": "Cortex AI",
-            "url": "https://usecortex.ai"
           }
         ]
       }
@@ -42,16 +105,18 @@
   {
     "id": 2,
     "link": "https://www.mitacs.ca/our-programs/globalink-research-internship-students/",
-    "company": "University of Windsor",
+    "company": "University of Windsor (Mitacs)",
     "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/exp/mitacs.png",
     "position": "Research Intern",
+    "employmentType": "Internship",
+    "location": "Windsor, Ontario, Canada",
     "startDate": "Aug 2024",
-    "endDate": "Oct 2024",
+    "endDate": "Nov 2024",
     "current": false,
     "responsibilities": [
-      "Fine-tuned 40+ LLMs (3B-70B parameters) using QLoRA and federated learning, achieving SOTA results on medical and financial datasets.",
-      "Implemented a privacy-preserving distributed training architecture, demonstrating 22% lower variance than traditional fine-tuning.",
-      "Worked with Python, PyTorch, Hugging Face, PEFT, and QLoRA in a distributed systems environment."
+      "Co-authored and published an IEEE paper (Big Data) on privacy-preserving LLM fine-tuning. Proposed a decentralized framework combining federated learning, blockchain, and secure multi-party computation to fine-tune LLaMA 3.1 and Mistral Nemo without exposing raw training data.",
+      "Benchmarked federated versus traditional fine-tuning across 52 models and 4 datasets. Showed that federated learning achieves lower or similar variance and more stable training for sensitive domains like healthcare.",
+      "Used QLoRA (4-bit quantization) to make LLM fine-tuning feasible on resource-constrained client hardware."
     ],
     "techStack": [
       "Python",
@@ -71,20 +136,21 @@
   {
     "id": 3,
     "link": "https://www.barclays.in/global-service-centre/btci/",
-    "company": "Barclays, Pune",
+    "company": "Barclays",
     "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/exp/barclays.png",
-    "position": "Technology Summer Intern",
-    "startDate": "June 2024",
-    "endDate": "July 2024",
+    "position": "Technology Intern",
+    "employmentType": "Internship",
+    "location": "Pune, India · Hybrid",
+    "startDate": "Jun 2024",
+    "endDate": "Jul 2024",
     "current": false,
     "responsibilities": [
-      "Optimized backend query processing for a service handling 1000+ Kubernetes pods' data, reducing response time from 8 minutes to under 1 minute.",
-      "Achieved performance gains through batching, multithreading, and caching with Redis.",
-      "Developed a dynamic query system with 27 filters and 100+ sub-filters, significantly enhancing DevOps productivity."
+      "Reduced response time of a Kubernetes fleet monitoring service from 8 minutes to under 1 minute (8x faster) with connection pooling, request batching, multithreading, and Redis caching across 1,000+ pods.",
+      "Built a dynamic query engine with 27 filters and 100+ sub-filters, giving DevOps teams fine-grained, real-time observability into their infrastructure."
     ],
     "techStack": [
       "Kubernetes",
-      "SpringBoot",
+      "Spring Boot",
       "SQL",
       "Redis"
     ]
@@ -92,16 +158,18 @@
   {
     "id": 4,
     "link": "https://litmuschaos.io/",
-    "company": "LitmusChaos - CNCF",
+    "company": "LitmusChaos (CNCF)",
     "logo": "https://dkedzrt1xmtkb.cloudfront.net/public/portfolio-website/exp/litmus.png",
-    "position": "Linux Foundation Mentee",
-    "startDate": "June 2023",
+    "position": "Linux Foundation Mentee (LFX)",
+    "employmentType": "Internship",
+    "location": "Remote",
+    "startDate": "Jun 2023",
     "endDate": "Aug 2023",
     "current": false,
     "responsibilities": [
-      "Migrated critical GraphQL APIs to a REST architecture, resolving user issues and improving system reliability.",
-      "Restructured the server package, reducing code duplication while achieving over 90% test coverage.",
-      "Contributed to a major open-source CNCF sandbox project using Go, Kubernetes, and Docker."
+      "Selected as a paid open-source mentee for LitmusChaos, a CNCF project for chaos engineering on Kubernetes.",
+      "Merged 7 PRs covering test infrastructure, interface refactoring, and code deduplication in the chaos engineering core. Drove test coverage above 90%.",
+      "Contributed to GraphQL-to-REST migration work and production-grade Go services used by the chaos platform."
     ],
     "techStack": [
       "Go",
