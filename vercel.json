@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/blog",
+      "destination": "https://sohamratnaparkhi-blog.vercel.app/blog"
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "https://sohamratnaparkhi-blog.vercel.app/blog/:path*"
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

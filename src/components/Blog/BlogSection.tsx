@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
 import blogData from '../../../config/blog.json';
 import { getAllPosts } from '@/lib/blog';
 import { externalBlogCta } from '@/lib/blogLinks';
@@ -22,7 +21,6 @@ interface BlogEntry {
 }
 
 const BlogSection: React.FC = () => {
-  const navigate = useNavigate();
   const mdPosts = getAllPosts();
 
   // Exactly 3 featured cards so the home grid is a clean full row
@@ -41,7 +39,8 @@ const BlogSection: React.FC = () => {
 
   const handlePostClick = (post: BlogEntry) => {
     if (post.slug) {
-      navigate(`/blog/${post.slug}`);
+      // slug = a post on the Astro blog at /blog (full page load, different app).
+      window.location.assign(`/blog/posts/${post.slug}/`);
     } else if (post.url) {
       window.open(post.url, '_blank');
     }
@@ -145,10 +144,11 @@ const BlogSection: React.FC = () => {
             className="text-lg px-8 py-3 transition-all hover:scale-105"
             asChild
           >
-            <Link to="/blog" className="flex items-center gap-2">
+            {/* /blog is served by the separate blog project (see vercel.json), so use a full page load. */}
+            <a href="/blog/" className="flex items-center gap-2">
               View All Articles
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>
