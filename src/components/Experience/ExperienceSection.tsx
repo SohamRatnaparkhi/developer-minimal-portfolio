@@ -137,7 +137,7 @@ const ExperienceSection: React.FC = () => {
                       {/* Multi-role growth path (LinkedIn nested roles) */}
                       {multiRole ? (
                         <div className="relative pl-0 sm:pl-[3.75rem]">
-                          <div className="absolute left-[1.35rem] sm:left-[5.1rem] top-2 bottom-2 w-px bg-border hidden sm:block" />
+                          <div className="absolute left-[1.35rem] sm:left-8 top-2 bottom-2 w-px bg-border hidden sm:block" />
                           <div className="space-y-6">
                             {experience.roles!.map((role, roleIdx) => (
                               <div key={`${experience.id}-role-${roleIdx}`} className="relative">
