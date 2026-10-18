@@ -23,7 +23,7 @@
           "Scaled the connectors product to 70+ SaaS sources (email, tickets, CRM, warehouses including BigQuery table rows) and built the end-to-end test harness that runs against every connector, including per-connector permission checks.",
           "Built the BYOC platform: HydraDB deployed and operated inside customers' own cloud accounts, with the same ingestion, search and observability as the hosted product.",
           "Shipped self-hosted small language models for embeddings and reranking to production on GPU nodes.",
-          "Building a graph database from scratch on object storage: OpenCypher and Bolt for Neo4j-driver compatibility, sparse indexes, cloud-native durability, and roughly 10x faster multi-hop traversals than Neo4j on our workloads.",
+          "Contributed to HydraDB's open-source graph database, built on object storage.",
           "Launched billing: plans, paywall and free-tier gating on production."
         ]
       },
@@ -33,10 +33,10 @@
         "endDate": "Present",
         "current": true,
         "responsibilities": [
-          "Sole owner of the backend and infrastructure from day zero. Grew the Kubernetes footprint from nothing to roughly 200 nodes.",
+          "Sole owner of the backend and infrastructure from day zero. Scaled the platform from 0 to about 50 million tokens a day.",
           "Built and shipped indexing for 100,000+ files a day across customer orgs.",
-          "Self-hosted the full production stack on Kubernetes/EKS: vector and graph databases, ClickHouse (analytics), Kafka, Temporal, plus Prometheus, Grafana and Alertmanager, with multi-tenant isolation.",
-          "Brought hybrid search under 200ms end to end, with sub-10ms queries on both the vector and the graph store.",
+          "Self-hosted the full production stack on Kubernetes/EKS: Milvus (vector), FalkorDB (graph), ClickHouse (analytics), Kafka, Temporal, plus Prometheus, Grafana and Alertmanager, with multi-tenant isolation.",
+          "Brought hybrid search under 200ms end to end, with sub-10ms queries on both Milvus and FalkorDB.",
           "Redesigned ingestion: Temporal durable workflows, a transactional inbox for exactly-once delivery, per-org Kafka topics for fair multi-tenant scheduling, claim-check for large payloads, and replay-safe sinks into vector, graph and metadata stores.",
           "Auto-published client SDKs from OpenAPI; led the platform move from usecortex.ai to hydradb.com."
         ]
@@ -47,8 +47,8 @@
       "Kubernetes",
       "Temporal",
       "Kafka",
-      "Vector databases",
-      "Graph databases",
+      "Milvus",
+      "FalkorDB",
       "ClickHouse",
       "FastAPI",
       "Rust",
@@ -62,6 +62,10 @@
           {
             "text": "HydraDB",
             "url": "https://hydradb.com"
+          },
+          {
+            "text": "Graph database on GitHub",
+            "url": "https://github.com/hydra-db/hydradb"
           }
         ]
       }
