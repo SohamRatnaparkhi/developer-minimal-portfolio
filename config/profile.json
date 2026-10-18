@@ -21,7 +21,7 @@
       ],
       "paragraphs": [
         "I like building databases and the backends around them. I lead product at HydraDB, where I started as the founding engineer.",
-        "Outside work I rebuild classic systems from their papers and write about it on my blog."
+        "Outside work I read the classic systems papers and write about what I learn on my blog."
       ]
     },
     "md": {
@@ -40,7 +40,7 @@
       ],
       "paragraphs": [
         "I like building databases and the backends around them: storage, pipelines, and the infrastructure that keeps them up. I lead product at HydraDB, where I started as the founding engineer and built the platform from zero.",
-        "Outside work I rebuild classic systems from their papers in Rust and write about what I learn on my blog."
+        "Outside work I read the classic systems papers and write about what I learn on my blog."
       ]
     },
     "lg": {
@@ -59,7 +59,7 @@
       ],
       "paragraphs": [
         "I like building databases and the backends around them: storage, pipelines, and the infrastructure that keeps them up. I lead product at HydraDB, where I started as the founding engineer and built the platform from zero.",
-        "Outside work I rebuild classic systems from their papers in Rust and write about what I learn on my blog."
+        "Outside work I read the classic systems papers and write about what I learn on my blog."
       ]
     }
   },
