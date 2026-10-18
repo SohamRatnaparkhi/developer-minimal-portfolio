@@ -10,7 +10,7 @@
     "endDate": "Present",
     "current": true,
     "highlight": "$6.5M seed",
-    "summary": "Founding engineer, now Product Lead. Built the backend and infrastructure from zero, through the $6.5M seed, and now set the product direction while still shipping.",
+    "summary": "Founding engineer, now Product Lead. Built the backend and infrastructure from zero through the $6.5M seed.",
     "roles": [
       {
         "position": "Product Lead",
@@ -18,12 +18,11 @@
         "endDate": "Present",
         "current": true,
         "responsibilities": [
-          "Own the roadmap for HydraDB's context graph platform: what we build, in what order, and how customers get their company knowledge into agents that work in production.",
-          "Still ship the hard parts myself: cut p90 ingestion latency roughly 70x by reworking the pipeline into background-processing stages with fleet-wide read routing, and made search roughly 10x faster.",
+          "Own the product roadmap for HydraDB's context graph platform.",
+          "Cut p90 ingestion latency roughly 70x by reworking the pipeline into background-processing stages with fleet-wide read routing, and made search roughly 10x faster.",
           "Scaled the connectors product to 70+ SaaS sources (email, tickets, CRM, warehouses including BigQuery table rows) and built the end-to-end test harness that runs against every connector, including per-connector permission checks.",
           "Built the BYOC platform: HydraDB deployed and operated inside customers' own cloud accounts, with the same ingestion, search and observability as the hosted product.",
           "Shipped self-hosted small language models for embeddings and reranking to production on GPU nodes.",
-          "Grew hybrid search into something customers rely on: sub-200ms retrieval, npm and PyPI SDKs generated from OpenAPI, and quality that holds up past the demo.",
           "Building a graph database from scratch on object storage: OpenCypher and Bolt for Neo4j-driver compatibility, sparse indexes, cloud-native durability, and roughly 10x faster multi-hop traversals than Neo4j on our workloads.",
           "Launched billing: plans, paywall and free-tier gating on production."
         ]
@@ -38,7 +37,7 @@
           "Built and shipped indexing for 100,000+ files a day across customer orgs.",
           "Self-hosted the full production stack on Kubernetes/EKS: Milvus (vector), FalkorDB (graph), ClickHouse (analytics), Kafka, Temporal, plus Prometheus, Grafana and Alertmanager, with multi-tenant isolation.",
           "Brought hybrid search under 200ms end to end, with sub-10ms queries on both Milvus and FalkorDB.",
-          "Redesigned ingestion after production pain: Temporal durable workflows, a transactional inbox for exactly-once delivery, per-org Kafka topics for fair multi-tenant scheduling, claim-check for large payloads, and replay-safe sinks into vector, graph and metadata stores.",
+          "Redesigned ingestion: Temporal durable workflows, a transactional inbox for exactly-once delivery, per-org Kafka topics for fair multi-tenant scheduling, claim-check for large payloads, and replay-safe sinks into vector, graph and metadata stores.",
           "Migrated Kafka off a managed path that was silently losing data (MSK Serverless to Strimzi KRaft); auto-published client SDKs from OpenAPI; led the platform move from usecortex.ai to hydradb.com."
         ]
       }
