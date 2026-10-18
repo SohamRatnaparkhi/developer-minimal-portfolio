@@ -38,7 +38,7 @@
           "Self-hosted the full production stack on Kubernetes/EKS: Milvus (vector), FalkorDB (graph), ClickHouse (analytics), Kafka, Temporal, plus Prometheus, Grafana and Alertmanager, with multi-tenant isolation.",
           "Brought hybrid search under 200ms end to end, with sub-10ms queries on both Milvus and FalkorDB.",
           "Redesigned ingestion: Temporal durable workflows, a transactional inbox for exactly-once delivery, per-org Kafka topics for fair multi-tenant scheduling, claim-check for large payloads, and replay-safe sinks into vector, graph and metadata stores.",
-          "Migrated Kafka off a managed path that was silently losing data (MSK Serverless to Strimzi KRaft); auto-published client SDKs from OpenAPI; led the platform move from usecortex.ai to hydradb.com."
+          "Migrated Kafka off a managed path that was silently losing data (MSK Serverless to AutoMQ); auto-published client SDKs from OpenAPI; led the platform move from usecortex.ai to hydradb.com."
         ]
       }
     ],

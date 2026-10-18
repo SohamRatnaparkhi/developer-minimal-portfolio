@@ -69,7 +69,7 @@ Owned the entire backend and infrastructure from day zero. Built the systems tha
 • Built and shipped indexing at 100,000+ files per day across customer orgs, with hybrid vector + graph retrieval under 200ms and sub-10ms query times on Milvus and FalkorDB
 • Self-hosted production on Kubernetes/EKS: Milvus, FalkorDB, ClickHouse, Kafka, Temporal, full observability stack, multi-tenant isolation
 • Redesigned document ingestion after production pain: Temporal workflows, exactly-once inbox, per-org Kafka fairness, claim-check payloads, replay-safe vector + graph sinks
-• Migrated Kafka off a path causing silent data loss (MSK Serverless to Strimzi KRaft); OpenAPI to npm/PyPI SDKs; led usecortex.ai to hydradb.com
+• Migrated Kafka off a path causing silent data loss (MSK Serverless to AutoMQ); OpenAPI to npm/PyPI SDKs; led usecortex.ai to hydradb.com
 • Worked as a product engineer through the $6.5M seed; now deep in a graph database built from scratch (not a Neo4j wrapper) for multi-tenant company memory and ~10x multi-hop speed on our benchmarks
 
 Skills: Python, Kubernetes, Temporal, Kafka, Milvus, FalkorDB, ClickHouse, FastAPI, Rust, OpenCypher, AWS, Helm, ArgoCD, OpenTelemetry, Redis
