@@ -62,6 +62,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				brand: 'hsl(var(--brand))',
 				'hero-accent': 'hsl(var(--hero-accent))',
 				'skill-accent': 'hsl(var(--skill-accent))',
 				'project-accent': 'hsl(var(--project-accent))',
@@ -74,8 +75,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
-				signature: ['Sacramento', 'cursive']
+				display: ['Inter Tight', 'Inter', 'system-ui', 'sans-serif'],
+				mono: ['JetBrains Mono', 'Fira Code', 'monospace']
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',

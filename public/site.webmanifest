@@ -1,26 +1,21 @@
 {
-  "name": "Soham Ratnaparkhi - AI & Full-Stack Engineer",
-  "short_name": "Soham R.",
-  "description": "AI & Full-Stack Engineer at Findr AI, specializing in building scalable AI systems and RAG applications.",
+  "name": "Soham Ratnaparkhi",
+  "short_name": "Soham",
+  "description": "Product Lead at HydraDB. Backend and infrastructure engineer writing about databases and distributed systems.",
   "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "display": "browser",
+  "background_color": "#f7f5ef",
+  "theme_color": "#f7f5ef",
   "icons": [
     {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
     },
     {
       "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/png",
+      "sizes": "180x180"
     }
   ]
 }

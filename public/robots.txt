@@ -1,9 +1,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://sohamratnaparkhi.com/sitemap.xml
+Sitemap: https://www.sohamratnaparkhi.com/sitemap.xml
 Sitemap: https://www.sohamratnaparkhi.com/blog/sitemap-index.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1

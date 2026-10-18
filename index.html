@@ -8,14 +8,12 @@
     <meta name="author" content="Soham Ratnaparkhi" />
     <meta name="keywords" content="Product Lead, Backend Engineer, Infrastructure, Kubernetes, Temporal, Kafka, Milvus, Graph Database, HydraDB, Hybrid Retrieval, IEEE Researcher" />
     <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
-    <meta name="revisit-after" content="7 days" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Soham Ratnaparkhi - Product Lead @ HydraDB | Backend & Infra Eng." />
     <meta property="og:description" content="Product Lead at HydraDB after founding backend and infra from day zero. Hybrid retrieval, multi-tenant ingestion, and graph systems in production." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sohamratnaparkhi.com" />
+    <meta property="og:url" content="https://www.sohamratnaparkhi.com/" />
     <meta property="og:image" content="https://dkedzrt1xmtkb.cloudfront.net/public/passport_size_photo.jpg" />
     <meta property="og:site_name" content="Soham Ratnaparkhi Portfolio" />
     <meta property="og:locale" content="en_US" />
@@ -29,23 +27,30 @@
     <meta name="twitter:creator" content="@SohamR_7113" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://sohamratnaparkhi.com" />
+    <link rel="canonical" href="https://www.sohamratnaparkhi.com/" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="Soham Ratnaparkhi's blog" href="/blog/rss.xml" />
+    <meta name="theme-color" content="#f7f5ef" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        var dark = t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+        if (dark) document.documentElement.classList.add("dark");
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

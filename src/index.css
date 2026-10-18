@@ -8,119 +8,121 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Same palette as the blog (sohamratnaparkhi/blog, src/styles/theme.css):
+       warm paper, near-black ink, one vermilion accent. */
+    --background: 45 33% 95%;
+    --foreground: 223 14% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 48 38% 97%;
+    --card-foreground: 223 14% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 48 38% 97%;
+    --popover-foreground: 223 14% 10%;
 
-    --primary: 220 14% 11%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 223 14% 10%;
+    --primary-foreground: 45 33% 95%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 44 27% 89%;
+    --secondary-foreground: 223 14% 10%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 44 27% 89%;
+    --muted-foreground: 224 9% 40%;
 
-    --accent: 210 40% 96%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 44 27% 89%;
+    --accent-foreground: 223 14% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222.2 84% 4.9%;
+    --border: 44 23% 84%;
+    --input: 44 23% 84%;
+    --ring: 18 88% 40%;
 
     --radius: 0.75rem;
 
-    /* Portfolio-specific colors */
-    --hero-accent: 220 100% 60%;
-    --skill-accent: 142 76% 36%;
-    --project-accent: 262 83% 58%;
-    --achievement-accent: 30 100% 55%;
-    
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(220 14% 20%));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(210 40% 90%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(210 40% 98%));
-    
+    /* One accent for every section */
+    --brand: 18 88% 40%;
+    --hero-accent: var(--brand);
+    --skill-accent: var(--brand);
+    --project-accent: var(--brand);
+    --achievement-accent: var(--brand);
+
+    /* Gradients: kept very subtle so surfaces read as paper, not glass */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(223 14% 18%));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(44 27% 86%));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(48 38% 97%));
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    
-    /* Shadows */
-    --shadow-soft: 0 2px 10px -2px hsl(var(--primary) / 0.1);
-    --shadow-medium: 0 8px 30px -8px hsl(var(--primary) / 0.2);
-    --shadow-strong: 0 20px 50px -10px hsl(var(--primary) / 0.3);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Shadows */
+    --shadow-soft: 0 1px 2px hsl(223 14% 10% / 0.05), 0 2px 10px -4px hsl(223 14% 10% / 0.08);
+    --shadow-medium: 0 8px 30px -10px hsl(223 14% 10% / 0.18);
+    --shadow-strong: 0 20px 50px -14px hsl(223 14% 10% / 0.25);
+
+    --sidebar-background: 48 38% 97%;
+    --sidebar-foreground: 223 14% 10%;
+    --sidebar-primary: 223 14% 10%;
+    --sidebar-primary-foreground: 45 33% 95%;
+    --sidebar-accent: 44 27% 89%;
+    --sidebar-accent-foreground: 223 14% 10%;
+    --sidebar-border: 44 23% 84%;
+    --sidebar-ring: 18 88% 40%;
   }
 
   .dark {
-    --background: 222 84% 5%;
-    --foreground: 210 40% 98%;
+    /* Ink-blue night with a warm coral accent */
+    --background: 220 16% 7%;
+    --foreground: 223 17% 92%;
 
-    --card: 222 84% 5%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 18% 10%;
+    --card-foreground: 223 17% 92%;
 
-    --popover: 222 84% 5%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 18% 10%;
+    --popover-foreground: 223 17% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 223 17% 92%;
+    --primary-foreground: 220 16% 7%;
 
-    --secondary: 217 33% 18%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 224 16% 14%;
+    --secondary-foreground: 223 17% 92%;
 
-    --muted: 217 33% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 224 16% 14%;
+    --muted-foreground: 219 11% 64%;
 
-    --accent: 217 33% 18%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 224 16% 14%;
+    --accent-foreground: 223 17% 92%;
 
-    --destructive: 0 63% 31%;
+    --destructive: 0 63% 45%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 18%;
-    --input: 217 33% 18%;
-    --ring: 213 27% 84%;
-    
-    /* Portfolio-specific colors for dark mode */
-    --hero-accent: 220 100% 70%;
-    --skill-accent: 142 76% 50%;
-    --project-accent: 262 83% 70%;
-    --achievement-accent: 30 100% 65%;
-    
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--background)), hsl(217 33% 18%));
-    --gradient-secondary: linear-gradient(135deg, hsl(217 33% 18%), hsl(215 20% 25%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(217 33% 10%));
-    
-    /* Dark mode shadows */
-    --shadow-soft: 0 2px 10px -2px hsl(0 0% 0% / 0.3);
-    --shadow-medium: 0 8px 30px -8px hsl(0 0% 0% / 0.4);
-    --shadow-strong: 0 20px 50px -10px hsl(0 0% 0% / 0.5);
+    --border: 221 14% 18%;
+    --input: 221 14% 18%;
+    --ring: 17 100% 68%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --brand: 17 100% 68%;
+    --hero-accent: var(--brand);
+    --skill-accent: var(--brand);
+    --project-accent: var(--brand);
+    --achievement-accent: var(--brand);
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--background)), hsl(224 16% 14%));
+    --gradient-secondary: linear-gradient(135deg, hsl(224 16% 14%), hsl(221 14% 18%));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(220 18% 9%));
+
+    --shadow-soft: 0 1px 2px hsl(0 0% 0% / 0.3), 0 2px 10px -4px hsl(0 0% 0% / 0.4);
+    --shadow-medium: 0 8px 30px -10px hsl(0 0% 0% / 0.5);
+    --shadow-strong: 0 20px 50px -14px hsl(0 0% 0% / 0.6);
+
+    --sidebar-background: 220 18% 10%;
+    --sidebar-foreground: 223 17% 92%;
+    --sidebar-primary: 223 17% 92%;
+    --sidebar-primary-foreground: 220 16% 7%;
+    --sidebar-accent: 224 16% 14%;
+    --sidebar-accent-foreground: 223 17% 92%;
+    --sidebar-border: 221 14% 18%;
+    --sidebar-ring: 17 100% 68%;
   }
 }
 
@@ -131,6 +133,17 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    background: hsl(var(--brand) / 0.85);
+    color: hsl(var(--background));
   }
 
   html {
@@ -168,14 +181,14 @@ All colors MUST be HSL.
   .navbar-blur {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    background: hsl(var(--background) / 0.8);
-    border-bottom: 1px solid hsl(var(--border) / 0.5);
+    background: hsl(var(--background) / 0.85);
+    border-bottom: 1px solid hsl(var(--border));
   }
 
   /* Subtle, theme-aware section surface for visual separation */
   .section-surface {
-    background-color: hsl(var(--background) / 0.6);
-    border: 1px solid hsl(var(--border) / 0.35);
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
     border-radius: var(--radius);
     box-shadow: var(--shadow-soft);
   }
@@ -324,11 +337,14 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Historically a blue gradient; now flat ink, matching the blog's headings */
   .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--hero-accent)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: hsl(var(--foreground));
+    letter-spacing: -0.03em;
+  }
+
+  .text-brand {
+    color: hsl(var(--brand));
   }
 
   .border-gradient {

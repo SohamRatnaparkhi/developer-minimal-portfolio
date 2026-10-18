@@ -26,7 +26,7 @@
         ]
       },
       {
-        "position": "Backend & Infra Eng.structure Engineer",
+        "position": "Backend & Infrastructure Engineer",
         "startDate": "Jun 2025",
         "endDate": "Present",
         "current": true,
@@ -69,7 +69,7 @@
     "id": 5,
     "link": "https://usefindr.com",
     "company": "Findr AI",
-    "logo": "https://www.usefindr.com/static/images/logos/findr.svg",
+    "logo": "",
     "position": "Founding Engineer",
     "employmentType": "Full-time",
     "location": "San Francisco Bay Area · Remote",

@@ -49,8 +49,8 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isDark, toggleTheme }) => {
         <div className="flex items-center justify-between">
           {/* Logo/Name */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-gradient hover:scale-105 transition-transform cursor-pointer font-signature">
-              {profileData.shortName}
+            <h1 className="text-lg font-display font-semibold tracking-tight hover:text-brand transition-colors cursor-pointer">
+              {profileData.name}
             </h1>
           </div>
 
