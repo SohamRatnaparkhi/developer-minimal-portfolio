@@ -115,7 +115,7 @@ const ExtraCurricularsSection: React.FC = () => {
             Extra-Curriculars
           </h2>
           <p className="text-xl text-muted-foreground mb-2">
-            Research contributions and achievements beyond development
+            Papers and awards
           </p>
           <a
             href="https://scholar.google.com/citations?user=IRU_Fy4AAAAJ&hl=en"

@@ -54,7 +54,7 @@ const BlogSection: React.FC = () => {
             Latest Articles
           </h2>
           <p className="text-xl text-muted-foreground">
-            Writing on agents, context graphs, and production infrastructure
+            Databases, distributed systems and infrastructure
           </p>
         </div>
 

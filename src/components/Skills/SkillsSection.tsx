@@ -80,7 +80,7 @@ const SkillsSection: React.FC = () => {
             Skills
           </h2>
           <p className="text-xl text-muted-foreground">
-            Technologies and tools I work with
+            What I build with
           </p>
         </div>
 

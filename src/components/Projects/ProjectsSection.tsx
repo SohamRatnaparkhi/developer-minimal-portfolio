@@ -26,7 +26,7 @@ const ProjectsSection: React.FC = () => {
             Projects
           </h2>
           <p className="text-xl text-muted-foreground">
-            Some of my recent work and contributions
+            Side projects, hackathon wins and open-source work
           </p>
         </div>
 

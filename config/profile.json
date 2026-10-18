@@ -1,7 +1,7 @@
 {
   "name": "Soham Ratnaparkhi",
   "shortName": "Soham R.",
-  "title": "Product Lead @ HydraDB · Backend & Infra Eng.",
+  "title": "Product Lead at HydraDB · databases, backends, infrastructure",
   "bio": {
     "sm": {
       "highlight_words": [
@@ -13,11 +13,15 @@
         {
           "text": "HydraDB",
           "url": "https://hydradb.com"
+        },
+        {
+          "text": "my blog",
+          "url": "/blog/"
         }
       ],
       "paragraphs": [
-        "I'm Soham. I lead product at HydraDB after growing the entire backend and infrastructure from day zero, the same systems that now index 100k+ files a day at sub-200ms search latency.",
-        "Currently shipping connectors, hybrid retrieval, and a graph database built from scratch on object storage, targeting ~10x multi-hop speed vs Neo4j."
+        "I like building databases and the backends around them. I lead product at HydraDB, where I started as the founding engineer.",
+        "Outside work I rebuild classic systems from their papers and write about it on my blog."
       ]
     },
     "md": {
@@ -28,11 +32,15 @@
         {
           "text": "HydraDB",
           "url": "https://hydradb.com"
+        },
+        {
+          "text": "my blog",
+          "url": "/blog/"
         }
       ],
       "paragraphs": [
-        "Hi, I'm Soham Ratnaparkhi. I lead product at HydraDB after building the backend and infrastructure from scratch as a founding engineer. What started as owning every Kafka topic, Temporal workflow, and Kubernetes node became owning product direction for a context graph platform that raised a $6.5M seed.",
-        "I care about systems that survive production: hybrid vector and graph retrieval under 200ms, durable ingestion that does not lose work, and a graph database we are building from the ground up on object storage for roughly 10x multi-hop performance vs Neo4j on our agent workloads. IEEE-published researcher, CNCF open-source mentee, and still in the weeds of the code."
+        "I like building databases and the backends around them: storage, pipelines, and the infrastructure that keeps them up. I lead product at HydraDB, where I started as the founding engineer and built the platform from zero.",
+        "Outside work I rebuild classic systems from their papers in Rust and write about what I learn on my blog."
       ]
     },
     "lg": {
@@ -43,12 +51,15 @@
         {
           "text": "HydraDB",
           "url": "https://hydradb.com"
+        },
+        {
+          "text": "my blog",
+          "url": "/blog/"
         }
       ],
       "paragraphs": [
-        "Hi, I'm Soham Ratnaparkhi. I lead product at HydraDB after building the backend and infrastructure from scratch as a founding engineer. What started as owning every Kafka topic, Temporal workflow, and Kubernetes node became owning product direction for a context graph platform that raised a $6.5M seed.",
-        "I care about systems that survive production: hybrid vector and graph retrieval under 200ms, durable ingestion that does not lose work, multi-tenant databases on self-hosted Kubernetes, and a graph database we are building from the ground up on object storage targeting roughly 10x multi-hop speed vs Neo4j on our workloads.",
-        "IEEE-published researcher, Linux Foundation / CNCF mentee, and still writing the code. I write about infrastructure, retrieval systems, graph engines, and building systems that scale."
+        "I like building databases and the backends around them: storage, pipelines, and the infrastructure that keeps them up. I lead product at HydraDB, where I started as the founding engineer and built the platform from zero.",
+        "Outside work I rebuild classic systems from their papers in Rust and write about what I learn on my blog."
       ]
     }
   },

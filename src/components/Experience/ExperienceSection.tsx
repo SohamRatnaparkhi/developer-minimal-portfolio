@@ -2,6 +2,7 @@ import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Github, ExternalLink, MapPin, ArrowUpRight } from 'lucide-react';
 import experienceData from '../../../config/experience.json';
+import CollapsibleBlock from '@/components/ui/collapsible-block';
 
 interface WorkLink {
   text: string;
@@ -53,7 +54,7 @@ const ExperienceSection: React.FC = () => {
               Experience
             </h2>
             <p className="text-xl text-muted-foreground">
-              From founding engineer to product lead: systems that ship and scale
+              Founding engineer to product lead
             </p>
           </div>
 
@@ -104,7 +105,7 @@ const ExperienceSection: React.FC = () => {
                                 </h3>
                               )}
                               {experience.highlight && (
-                                <Badge className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/15">
+                                <Badge className="bg-brand/10 text-brand border border-brand/25 hover:bg-brand/15">
                                   {experience.highlight}
                                 </Badge>
                               )}
@@ -131,6 +132,8 @@ const ExperienceSection: React.FC = () => {
                         </p>
                       )}
 
+                      {/* Long role histories collapse; click to expand */}
+                      <CollapsibleBlock maxHeight={300}>
                       {/* Multi-role growth path (LinkedIn nested roles) */}
                       {multiRole ? (
                         <div className="relative pl-0 sm:pl-[3.75rem]">
@@ -201,6 +204,7 @@ const ExperienceSection: React.FC = () => {
                           )}
                         </div>
                       )}
+                      </CollapsibleBlock>
 
                       {/* Footer links + stack */}
                       <div className="mt-5 pt-4 border-t border-border/50 pl-0 sm:pl-[3.75rem] space-y-3">
