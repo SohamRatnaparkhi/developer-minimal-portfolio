@@ -45,16 +45,6 @@
     "category": "Framework"
   },
   {
-    "name": "Milvus",
-    "logo": "https://cdn.jsdelivr.net/gh/milvus-io/milvus-docs@master/assets/milvus_logo.png",
-    "category": "Database"
-  },
-  {
-    "name": "FalkorDB",
-    "logo": "https://avatars.githubusercontent.com/u/140034498?s=200&v=4",
-    "category": "Database"
-  },
-  {
     "name": "ClickHouse",
     "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clickhouse/clickhouse-original.svg",
     "category": "Database"

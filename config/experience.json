@@ -35,8 +35,8 @@
         "responsibilities": [
           "Sole owner of the backend and infrastructure from day zero. Grew the Kubernetes footprint from nothing to roughly 200 nodes.",
           "Built and shipped indexing for 100,000+ files a day across customer orgs.",
-          "Self-hosted the full production stack on Kubernetes/EKS: Milvus (vector), FalkorDB (graph), ClickHouse (analytics), Kafka, Temporal, plus Prometheus, Grafana and Alertmanager, with multi-tenant isolation.",
-          "Brought hybrid search under 200ms end to end, with sub-10ms queries on both Milvus and FalkorDB.",
+          "Self-hosted the full production stack on Kubernetes/EKS: vector and graph databases, ClickHouse (analytics), Kafka, Temporal, plus Prometheus, Grafana and Alertmanager, with multi-tenant isolation.",
+          "Brought hybrid search under 200ms end to end, with sub-10ms queries on both the vector and the graph store.",
           "Redesigned ingestion: Temporal durable workflows, a transactional inbox for exactly-once delivery, per-org Kafka topics for fair multi-tenant scheduling, claim-check for large payloads, and replay-safe sinks into vector, graph and metadata stores.",
           "Auto-published client SDKs from OpenAPI; led the platform move from usecortex.ai to hydradb.com."
         ]
@@ -47,8 +47,8 @@
       "Kubernetes",
       "Temporal",
       "Kafka",
-      "Milvus",
-      "FalkorDB",
+      "Vector databases",
+      "Graph databases",
       "ClickHouse",
       "FastAPI",
       "Rust",

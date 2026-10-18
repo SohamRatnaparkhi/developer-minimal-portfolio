@@ -66,13 +66,13 @@ Skills: Product Management, Distributed Systems, APIs, Graph Databases, Kubernet
 ```
 Owned the entire backend and infrastructure from day zero. Built the systems that power HydraDB's multi-tenant context graph product (raised a $6.5M seed).
 
-• Built and shipped indexing at 100,000+ files per day across customer orgs, with hybrid vector + graph retrieval under 200ms and sub-10ms query times on Milvus and FalkorDB
-• Self-hosted production on Kubernetes/EKS: Milvus, FalkorDB, ClickHouse, Kafka, Temporal, full observability stack, multi-tenant isolation
+• Built and shipped indexing at 100,000+ files per day across customer orgs, with hybrid vector + graph retrieval under 200ms and sub-10ms query times on both stores
+• Self-hosted production on Kubernetes/EKS: vector and graph databases, ClickHouse, Kafka, Temporal, full observability stack, multi-tenant isolation
 • Redesigned document ingestion after production pain: Temporal workflows, exactly-once inbox, per-org Kafka fairness, claim-check payloads, replay-safe vector + graph sinks
 • OpenAPI to npm/PyPI SDKs; led usecortex.ai to hydradb.com
 • Worked as a product engineer through the $6.5M seed; now deep in a graph database built from scratch (not a Neo4j wrapper) for multi-tenant company memory and ~10x multi-hop speed on our benchmarks
 
-Skills: Python, Kubernetes, Temporal, Kafka, Milvus, FalkorDB, ClickHouse, FastAPI, Rust, OpenCypher, AWS, Helm, ArgoCD, OpenTelemetry, Redis
+Skills: Python, Kubernetes, Temporal, Kafka, Vector databases, Graph databases, ClickHouse, FastAPI, Rust, OpenCypher, AWS, Helm, ArgoCD, OpenTelemetry, Redis
 ```
 
 ---
@@ -186,7 +186,7 @@ Optional featured posts once live on the portfolio:
 11. AWS  
 12. OpenTelemetry  
 
-Also add: Rust, Go, ClickHouse, Milvus, OpenAPI, RAG, LLMs, Leadership
+Also add: Rust, Go, ClickHouse, OpenAPI, RAG, LLMs, Leadership
 
 ---
 
