@@ -3,6 +3,10 @@ import { Button } from '@/components/ui/button';
 import { Moon, Sun, Home, User, Code, FolderOpen, PenTool, FileText } from 'lucide-react';
 import profileData from '../../../config/profile.json';
 
+// Resume button in the nav. Off for now; set to true to show it again.
+const SHOW_RESUME = false;
+const RESUME_URL = 'https://drive.google.com/file/d/1_Hd836nh2GvtntRbNssChoF1YCCC5k_r/view?usp=sharing';
+
 interface DesktopNavProps {
   isDark: boolean;
   toggleTheme: () => void;
@@ -72,15 +76,17 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isDark, toggleTheme }) => {
           {/* Theme Toggle */}
           <div className='ml-4 flex items-center gap-2'> 
           {/* Resume Link */}
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => window.open('https://drive.google.com/file/d/1_Hd836nh2GvtntRbNssChoF1YCCC5k_r/view?usp=sharing', '_blank')}
-            className="ml-4 flex items-center gap-2"
-          >
-            <FileText className="h-4 w-4" />
-            Resume
-          </Button>
+          {SHOW_RESUME && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => window.open(RESUME_URL, '_blank')}
+              className="ml-4 flex items-center gap-2"
+            >
+              <FileText className="h-4 w-4" />
+              Resume
+            </Button>
+          )}
           <Button
             variant="ghost"
             size="icon"
