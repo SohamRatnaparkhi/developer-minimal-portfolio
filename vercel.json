@@ -6,8 +6,8 @@
       "destination": "https://sohamratnaparkhi-blog.vercel.app/blog"
     },
     {
-      "source": "/blog/:path*",
-      "destination": "https://sohamratnaparkhi-blog.vercel.app/blog/:path*"
+      "source": "/blog/(.*)",
+      "destination": "https://sohamratnaparkhi-blog.vercel.app/blog/$1"
     },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
