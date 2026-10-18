@@ -56,3 +56,6 @@ Claude-YC startup school*.md
 *.tmp
 *.bak
 .cache/
+
+# Astro (other branch)
+.astro
